@@ -16,7 +16,7 @@ var count = 0
 
 for character in gString.characters {
     if character == "g" || character == "G" {
-        count++
+        count += 1
     }
 }
 

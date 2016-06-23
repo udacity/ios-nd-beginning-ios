@@ -10,4 +10,3 @@ Closely related to variables are constants. Constants can be summarized with the
 *let nameOfConstant: Type = constantValue*
 */
 let piConstant = 3.14
-//: [Next](@next)

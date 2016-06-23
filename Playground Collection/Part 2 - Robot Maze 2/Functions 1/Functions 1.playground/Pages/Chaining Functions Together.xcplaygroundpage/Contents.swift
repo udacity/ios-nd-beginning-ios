@@ -11,5 +11,3 @@ let excitedString = addExcitementToString(addExcitementToString("yay"))
 
 // chained together 4 times
 let reallyExcitedString = addExcitementToString(addExcitementToString(addExcitementToString(addExcitementToString("wahoo"))))
-
-//: [Next](@next)

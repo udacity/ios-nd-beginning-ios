@@ -16,7 +16,7 @@ if let imageSize = anotherImageView.image?.size {
 } else {
     print("This image hasn't been set.")
 }
-imageView.image
+anotherImageView.image
 
 // Example: Animals With and Without Tails
 

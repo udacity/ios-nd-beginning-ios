@@ -1,4 +1,3 @@
-//: [Previous](@previous)
 /*:
 ## Without Nesting
 Before we look at nested loops, let's see what a checkboard looks like without nesting...

@@ -46,7 +46,9 @@ medianAndAverage(num1: 2, num2: 2, num3: 1) // (2, 1.666)
 /*:
 ### Exercise 3
 
-Write a function called `updateStudentRecord` that takes three parameters: a `StudentRecord`, an `Int` for pointsEarned, and an `Int` for pointsPossible. This function should modify the `StudentRecord` parameter by adding to its current pointsEarned and pointsPossible properties. Then, the function should return the updated `StudentRecord` (remember it is a copy, not a reference).
+Write a function called `updateStudentRecordInOut` that performs the same task as `updateStudentRecord` except it operates upon an in-out `StudentRecord` parameter.
+
+Hint: Should this function return a value? See the example function calls for help.
 
 */
 struct StudentRecord {
@@ -56,31 +58,6 @@ struct StudentRecord {
     var pointsPossible: Int
 }
 
-func updateStudentRecord(/* define parameters */) /* define return type */ {
-}
-
-var record1 = StudentRecord(id: 1, name: "James", pointsEarned: 56, pointsPossible: 60)
-
-/* Example Function Call
-
-record1 = updateStudentRecord(record1, pointsEarned: 10, pointsPossible: 10)
-record1.pointsEarned // 66
-record1.pointsPossible // 70
-
-record1 = updateStudentRecord(record1, pointsEarned: 4, pointsPossible: 7)
-record1.pointsEarned // 70
-record1.pointsPossible // 77
-
-*/
-
-/*:
-### Exercise 4
-
-Write a function called `updateStudentRecordInOut` that performs the same task as `updateStudentRecord` except it operates upon an in-out `StudentRecord` parameter.
-
-Hint: Should this function return a value? See the example function calls for help.
-
-*/
 func updateStudentRecordInOut(/* define parameters */) /* define return type */ {
 }
 
@@ -99,7 +76,7 @@ record2.pointsPossible // 47
 */
 
 /*:
-### Exercise 5 (Bonus Problem!)
+### Exercise 4 (Bonus Problem!)
 
 Rewrite the nested function `innerFunction` such that the example function calls return the correct values.
 

@@ -39,13 +39,3 @@ var drewSalary = 500000
 totalPayroll -= billySalary
 totalPayroll -= ericSalary
 totalPayroll -= drewSalary
-
-//: Working with increment/decrement operators
-var poundsOfFlour = 1
-var poundsOfButter = 1
-var poundsOfEggs = 1
-var poundsOfSugar = 1
-
-var totalPounds = poundsOfFlour++ + poundsOfButter + poundsOfEggs + poundsOfSugar
-
-poundsOfFlour

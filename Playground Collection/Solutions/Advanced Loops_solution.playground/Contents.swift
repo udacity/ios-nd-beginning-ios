@@ -1,9 +1,8 @@
 //Write a for loop to count down from 10 to 1
 
-for var i = 10; i >= 1; i-- {
-    print(i)
+for i in 0..<10 {
+    print(10-i)
 }
-
 
 //Exercise ANSWER
 

@@ -16,16 +16,6 @@ struct BaseballHittingStats {
 
 var miguelCabrera = BaseballHittingStats(atBats: 384, hits: 131, singles: 86, doubles: 27, triples: 1, homeRuns: 17)
 
-func addHitsWithVar(var stats: BaseballHittingStats, hits: Int) {
-    stats.hits += hits
-    print(stats.hits)
-}
-
-// variable parameters are only copies!
-miguelCabrera.hits
-addHitsWithVar(miguelCabrera, hits: 2)
-miguelCabrera.hits
-
 func addHitsWithInOut(inout stats: BaseballHittingStats, hits: Int) {
     stats.hits += hits
     print(stats.hits)

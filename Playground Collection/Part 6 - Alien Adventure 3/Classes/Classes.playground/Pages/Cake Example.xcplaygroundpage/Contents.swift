@@ -21,8 +21,9 @@ struct CakeHaverStruct: CakeHaver {
     var cake: Cake? = Cake()
 }
 
-func eatCake(var cakeHaver: CakeHaver) {
-    cakeHaver.cake = nil
+func eatCake(cakeHaver: CakeHaver) {
+    var cakeHaverCopy = cakeHaver
+    cakeHaverCopy.cake = nil
 }
 
 func cakeStatus(cakeHaver: CakeHaver) {

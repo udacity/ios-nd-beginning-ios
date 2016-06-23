@@ -115,7 +115,7 @@ struct Deck {
     }
     
     mutating func shuffle() {
-        for var i:Int = 0; i < cards.count - 1; i++ {
+        for i in 0..<cards.count {
             let swapIndex = (Int(arc4random()) % cards.count - i) + i
             (cards[swapIndex], cards[i]) = (cards[i], cards[swapIndex])
         }
