@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Introduction'/>
+        <page name='Enum syntax'/>
+        <page name='Raw values'/>
+        <page name='Enums and Switch statements'/>
+        <page name='Enum initialization'/>
+        <page name='Exercises'/>
+        <page name='Exercise_solutions'/>
+    </pages>
+</playground>

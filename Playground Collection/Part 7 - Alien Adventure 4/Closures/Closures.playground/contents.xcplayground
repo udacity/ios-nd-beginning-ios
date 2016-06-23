@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='rendered'>
+    <pages>
+        <page name='Closure_a self-contained block of code'/>
+        <page name='What are closures good for?'/>
+        <page name='Closure expression syntax_sort()'/>
+        <page name='Closure types quiz_alphabeticalSoup'/>
+        <page name='Closure shorthand with filter()'/>
+    </pages>
+</playground>

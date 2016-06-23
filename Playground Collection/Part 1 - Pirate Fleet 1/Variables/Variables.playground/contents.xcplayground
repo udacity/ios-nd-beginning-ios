@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='raw'>
+    <pages>
+        <page name='Using Playgrounds'/>
+        <page name='Creating Variables in Swift'/>
+        <page name='Variables and Constants'/>
+    </pages>
+</playground>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Introduction'/>
+        <page name='Switch Statement Syntax'/>
+        <page name='Multiple Values'/>
+        <page name='Interval Matching'/>
+        <page name='Fallthrough'/>
+        <page name='Switch Statements Practice'/>
+    </pages>
+</playground>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='rendered'>
+    <pages>
+        <page name='Introduction'/>
+        <page name='MapExample_Convert Ints to Strings'/>
+        <page name='MapExample_CampingTripDebts'/>
+        <page name='MapExample_TrailingClosures'/>
+        <page name='ReduceExample_SumAllTheValues'/>
+        <page name='ReduceExample_ArrayMaxOrMin'/>
+    </pages>
+</playground>

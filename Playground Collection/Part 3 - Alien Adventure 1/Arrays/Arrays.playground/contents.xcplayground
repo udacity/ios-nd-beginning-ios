@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='rendered'>
+    <pages>
+        <page name='An ordered list of items'/>
+        <page name='Three ways to initialize an array'/>
+        <page name='Swift arrays have types'/>
+        <page name='Array operations'/>
+        <page name='Concatenating and Copying'/>
+        <page name='Looping through arrays with for-in'/>
+        <page name='Exercises'/>
+        <page name='Exercise_solutions'/>
+    </pages>
+</playground>

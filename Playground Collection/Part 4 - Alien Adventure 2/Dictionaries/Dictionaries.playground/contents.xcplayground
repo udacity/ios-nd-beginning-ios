@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Introduction'/>
+        <page name='Initialization'/>
+        <page name='Operations_insert, count, remove, update'/>
+        <page name='Operations_retrieving a value'/>
+        <page name='Exercises'/>
+        <page name='Exercises_withSolutions'/>
+    </pages>
+</playground>

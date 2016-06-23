@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='Overloading Functions'/>
+        <page name='Overloading Functions Practice'/>
+        <page name='Overloading Functions Solution'/>
+        <page name='Tuples (Multiple Return Values)'/>
+        <page name='Tuples Practice'/>
+        <page name='Tuples Solution'/>
+        <page name='Variable Params'/>
+        <page name='Variable Params Practice'/>
+        <page name='Variable Params Solution'/>
+        <page name='In-Out Params'/>
+        <page name='In-Out Params Practice'/>
+        <page name='In-Out Params Solution'/>
+        <page name='Nested Functions'/>
+    </pages>
+</playground>
