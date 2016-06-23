@@ -1,3 +1,3 @@
 # Learning Swift
 
-Resources for Udacity's Learning Swift course.
+Resources for Beginning iOS and Udacity's Learning Swift course.
