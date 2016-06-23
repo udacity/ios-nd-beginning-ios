@@ -64,9 +64,10 @@ func prepareForDuelingBanjos(musician: Musician) {
     musician.instrument = Banjo()
     musician.instrument
 }
-func prepareForDuelingBanjos(var musician: MusicianStruct) {
-    musician.instrument = Banjo()
-    musician.instrument
+func prepareForDuelingBanjos(musician: MusicianStruct) {
+    var musicianCopy = musician
+    musicianCopy.instrument = Banjo()
+    musicianCopy.instrument
 }
 
 let musicianStruct = MusicianStruct(instrument: Fiddle())
