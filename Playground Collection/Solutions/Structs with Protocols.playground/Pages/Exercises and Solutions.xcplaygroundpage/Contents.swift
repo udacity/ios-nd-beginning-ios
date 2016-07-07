@@ -11,8 +11,8 @@ Build a real implementation of == which compares the two `Joker` instead of just
 */
 struct Joker: PlayingCard, Equatable {
     enum Color {
-        case Red
-        case Black
+        case red
+        case black
     }
     let color:Color
     var isFaceDown:Bool
@@ -22,9 +22,9 @@ struct Joker: PlayingCard, Equatable {
         }
         
         switch color {
-        case .Red:
+        case .red:
             return "R 🃏"
-        case .Black:
+        case .black:
             return "B 🃏"
         }
     }
@@ -44,72 +44,72 @@ Implement Comparable on SuitedCard using Blackjack rules. The Ace can be worth 1
 */
 struct SuitedCard: PlayingCard, Comparable {
     enum Suit {
-        case Hearts
-        case Spades
-        case Diamonds
-        case Clubs
+        case hearts
+        case spades
+        case diamonds
+        case clubs
     }
     
     enum Value {
-        case Two
-        case Three
-        case Four
-        case Five
-        case Six
-        case Seven
-        case Eight
-        case Nine
-        case Ten
-        case Jack
-        case Queen
-        case King
-        case Ace
+        case two
+        case three
+        case four
+        case five
+        case six
+        case seven
+        case eight
+        case nine
+        case ten
+        case jack
+        case queen
+        case king
+        case ace
     }
     
     let suit:Suit
     let value:Value
     var isFaceDown:Bool
     
-    var suitDisplay:String {
+    var suitDisplay: String {
         switch self.suit {
-        case .Hearts:
+        case .hearts:
             return "♥"
-        case .Spades:
+        case .spades:
             return "♠"
-        case .Diamonds:
+        case .diamonds:
             return "♦"
-        case .Clubs:
+        case .clubs:
             return "♣"
         }
     }
     
-    var valueDisplay:String {
+    var valueDisplay: String {
         switch self.value {
-        case .Two:
+        case .two:
             return "2"
-        case .Three:
+        case .three:
             return "3"
-        case .Four:
+        case .four:
             return "4"
-        case .Five:
+        case .five:
             return "5"
-        case .Six:
+        case .six:
             return "6"
-        case .Seven:
+        case .seven:
             return "7"
-        case .Eight:
+        case .eight:
             return "8"
-        case .Nine:
+        case .nine:
             return "9"
-        case .Ten:
+        case .ten:
             return "10"
-        case .Jack:
+        case .jack:
             return "J"
-        case .Queen:
+        case .queen:
             return "Q"
-        case .King:
+        case .king:
             return "K"
-        case .Ace:
+        case .ace:
             return "A"
         }
     }
@@ -130,9 +130,9 @@ struct SuitedCard: PlayingCard, Comparable {
 
 func ==(lhs: SuitedCard, rhs: SuitedCard) -> Bool {
     switch lhs.value {
-    case .Ten, .Jack, .Queen, .King:
+    case .ten, .jack, .queen, .king:
         switch rhs.value {
-        case .Ten, .Jack, .Queen, .King:
+        case .ten, .jack, .queen, .king:
             return true
         default:
             break
@@ -149,60 +149,60 @@ func <(lhs: SuitedCard, rhs: SuitedCard) -> Bool {
     var rhsValue = 0
     
     switch lhs.value {
-    case .Two:
+    case .two:
         lhsValue = 2
-    case .Three:
+    case .three:
         lhsValue = 3
-    case .Four:
+    case .four:
         lhsValue = 4
-    case .Five:
+    case .five:
         lhsValue = 5
-    case .Six:
+    case .six:
         lhsValue = 6
-    case .Seven:
+    case .seven:
         lhsValue = 7
-    case .Eight:
+    case .eight:
         lhsValue = 8
-    case .Nine:
+    case .nine:
         lhsValue = 9
-    case .Ten:
+    case .ten:
         lhsValue = 10
-    case .Jack:
+    case .jack:
         lhsValue = 10
-    case .Queen:
+    case .queen:
         lhsValue = 10
-    case .King:
+    case .king:
         lhsValue = 10
-    case .Ace:
+    case .ace:
         lhsValue = 11
     }
     
     switch rhs.value {
-    case .Two:
+    case .two:
         rhsValue = 2
-    case .Three:
+    case .three:
         rhsValue = 3
-    case .Four:
+    case .four:
         rhsValue = 4
-    case .Five:
+    case .five:
         rhsValue = 5
-    case .Six:
+    case .six:
         rhsValue = 6
-    case .Seven:
+    case .seven:
         rhsValue = 7
-    case .Eight:
+    case .eight:
         rhsValue = 8
-    case .Nine:
+    case .nine:
         rhsValue = 9
-    case .Ten:
+    case .ten:
         rhsValue = 10
-    case .Jack:
+    case .jack:
         rhsValue = 10
-    case .Queen:
+    case .queen:
         rhsValue = 10
-    case .King:
+    case .king:
         rhsValue = 10
-    case .Ace:
+    case .ace:
         rhsValue = 11
     }
     
@@ -241,19 +241,19 @@ struct Deck {
 
 var deckOfHearts = Deck()
 deckOfHearts.cards = [
-    SuitedCard(suit: .Hearts, value: .Two, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Three, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Four, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Five, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Six, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Seven, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Eight, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Nine, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Ten, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Jack, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Queen, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .King, isFaceDown: false),
-    SuitedCard(suit: .Hearts, value: .Ace, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .two, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .three, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .four, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .five, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .six, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .seven, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .eight, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .nine, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .ten, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .jack, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .queen, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .king, isFaceDown: false),
+    SuitedCard(suit: .hearts, value: .ace, isFaceDown: false),
 ]
 
 deckOfHearts.shuffle()

@@ -8,11 +8,11 @@ Write two versions of a function called overloadingFun. One version accepts a si
 Hint: See the example function calls to determine how to implement each function.
 
 */
-func overloadingFun(s1: String) -> String {
+func overloadingFun(_ s1: String) -> String {
     return "I'm a String with the value: " + s1
 }
 
-func overloadingFun(num: Int) -> String {
+func overloadingFun(_ num: Int) -> String {
     return "I'm an Int with the value: " + String(num)
 }
 
@@ -32,7 +32,7 @@ overloadingFun("")
 
 //: ### Exercise 2
 //: Write a function `medianAndAverage` that takes three `Int` parameters and returns a tuple with the type `(Int, Double)` where the first value is the median of the input values and the second value is the average of the input values.
-func medianAndAverage(num1 num1: Int, num2: Int, num3: Int) -> (Int, Double) {
+func medianAndAverage(num1: Int, num2: Int, num3: Int) -> (Int, Double) {
     var median: Int
 
     if num1 < num2 {            // partial order = num1, num2
@@ -95,7 +95,7 @@ struct StudentRecord {
     var pointsPossible: Int
 }
 
-func updateStudentRecordInOut(inout record: StudentRecord, pointsEarned: Int, pointsPossible: Int) {
+func updateStudentRecordInOut(_ record: inout StudentRecord, pointsEarned: Int, pointsPossible: Int) {
     record.pointsEarned += pointsEarned
     record.pointsPossible += pointsPossible
 }
@@ -129,9 +129,9 @@ Rewrite the nested function `innerFunction` such that the example function calls
 
 Hint: The `outerFunction` implements [Exclusive OR](https://en.wikipedia.org/wiki/Exclusive_or) (XOR) which is a logical operator that returns true when there is an odd number of inputs that are true.
 */
-func outerFunction(input1 input1: Bool, input2: Bool) -> Bool {
+func outerFunction(input1: Bool, input2: Bool) -> Bool {
     
-    func innerFunction(a a: Bool, b: Bool) -> Bool {
+    func innerFunction(a: Bool, b: Bool) -> Bool {
         return !a && b
         /* could have also used `return a && !b` */
     }

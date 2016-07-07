@@ -19,11 +19,11 @@ var sixDegreesOfKevinBacon = Game(bugs: 5, hasMusic: true, levels: 3)
 var slowAdventuresWithMorrisTheLoris = Game(bugs: 9, hasMusic: true, levels: 7)
 
 
-func release(game: Game) {
+func release(_ game: Game) {
     print("Ship it!")
 }
 
-func checkGameForRelease(game: Game) {
+func checkGameForRelease(_ game: Game) {
     if game.bugs < 10 && game.hasMusic && game.levels > 5 {
         release(game)
     }

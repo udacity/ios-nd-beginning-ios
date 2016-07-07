@@ -4,20 +4,20 @@
 //: ### Exercise 1
 //: Below is an if, else-if statement which determines what team to cheer for conditioning on the sport being played.
 enum Sport {
-    case Baseball, Basketball, AmericanFootball, Hockey, Soccer
+    case baseball, basketball, americanFootball, hockey, soccer
 }
 
-var sport = Sport.Baseball
+var sport = Sport.baseball
 
-if sport == .Baseball {
+if sport == .baseball {
     print("Go A's!")
-} else if sport == .Basketball {
+} else if sport == .basketball {
     print("Go Warriors!")
-} else if sport == .AmericanFootball {
+} else if sport == .americanFootball {
     print( "Go Raiders!")
-} else if sport == .Hockey {
+} else if sport == .hockey {
     print("Go Sharks!")
-} else if sport == .Soccer {
+} else if sport == .soccer {
     print("Go Earthquakes!")
 } else {
     print("Go Team!")
@@ -25,15 +25,15 @@ if sport == .Baseball {
 
 // Solution
 switch sport {
-case .Baseball:
+case .baseball:
     print("Go A's!")
-case .Basketball:
+case .basketball:
     print("Go Warriors!")
-case .AmericanFootball:
+case .americanFootball:
     print("Go Raiders!")
-case .Hockey:
+case .hockey:
     print("Go Sharks!")
-case .Soccer:
+case .soccer:
     print("Go Earthquakes")
 // In cases such as these, we no longer have to provide a default case because the compiler can detect that it would never be executed.
 //default:

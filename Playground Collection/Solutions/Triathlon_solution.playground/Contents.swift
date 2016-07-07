@@ -21,7 +21,7 @@ class Trainee {
 var athlete1 = Trainee(name: "Kurt", canFinishSwim: false, canFinishBike: true, canFinishRun: true)
 var athlete2 = Trainee(name: "Teresa", canFinishSwim: true, canFinishBike: true, canFinishRun: true)
 
-func checkTrainingStatus (triathleteInTraining: Trainee) {
+func checkTrainingStatus (_ triathleteInTraining: Trainee) {
     if !triathleteInTraining.canFinishRun {
         print("Try going for longer runs the next two weekends.")
     }

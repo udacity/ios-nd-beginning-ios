@@ -14,26 +14,26 @@ protocol PlayingCard {
 //: ### SuitedCard is-a PlayingCard
 struct SuitedCard: PlayingCard {
     enum Suit {
-        case Hearts
-        case Spades
-        case Diamonds
-        case Clubs
+        case hearts
+        case spades
+        case diamonds
+        case clubs
     }
     
     enum Value {
-        case Two
-        case Three
-        case Four
-        case Five
-        case Six
-        case Seven
-        case Eight
-        case Nine
-        case Ten
-        case Jack
-        case Queen
-        case King
-        case Ace
+        case two
+        case three
+        case four
+        case five
+        case six
+        case seven
+        case eight
+        case nine
+        case ten
+        case jack
+        case queen
+        case king
+        case ace
     }
     
     let suit: Suit
@@ -42,44 +42,44 @@ struct SuitedCard: PlayingCard {
     
     var suitDisplay: String {
         switch self.suit {
-        case .Hearts:
+        case .hearts:
             return "♥"
-        case .Spades:
+        case .spades:
             return "♠"
-        case .Diamonds:
+        case .diamonds:
             return "♦"
-        case .Clubs:
+        case .clubs:
             return "♣"
         }
     }
     
     var valueDisplay: String {
         switch self.value {
-        case .Two:
+        case .two:
             return "2"
-        case .Three:
+        case .three:
             return "3"
-        case .Four:
+        case .four:
             return "4"
-        case .Five:
+        case .five:
             return "5"
-        case .Six:
+        case .six:
             return "6"
-        case .Seven:
+        case .seven:
             return "7"
-        case .Eight:
+        case .eight:
             return "8"
-        case .Nine:
+        case .nine:
             return "9"
-        case .Ten:
+        case .ten:
             return "10"
-        case .Jack:
+        case .jack:
             return "J"
-        case .Queen:
+        case .queen:
             return "Q"
-        case .King:
+        case .king:
             return "K"
-        case .Ace:
+        case .ace:
             return "A"
         }
     }
@@ -98,8 +98,8 @@ struct SuitedCard: PlayingCard {
     }
 }
 
-let suits: [SuitedCard.Suit] = [.Hearts, .Diamonds, .Clubs, .Spades]
-let values: [SuitedCard.Value] = [.Two, .Three, .Four, .Five, .Six, .Seven, .Eight, .Nine, .Ten, .Jack, .Queen, .King, .Ace]
+let suits:[SuitedCard.Suit] = [.hearts, .diamonds, .clubs, .spades]
+let values:[SuitedCard.Value] = [.two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .jack, .queen, .king, .ace]
 
 //: ### Deck struct
 struct Deck {
@@ -126,20 +126,22 @@ struct Deck {
 class BlackjackPlayer {
     var hand: [SuitedCard] = []
     
-    // TODO: implement playTurn
     func playTurn(dealer: Dealer) {
-        while(highTotal < 19) {
-            hit(dealer)
+        while(!hasBusted()) {
+            // TODO: decide whether to hit or stand
+            while(highTotal < 19) {
+                hit(dealer: dealer)
+            }
+            stand(dealer: dealer)
         }
-        stand(dealer)
     }
     
-    func hit(dealer:Dealer) {
-        dealer.hit(self)
+    func hit(dealer: Dealer) {
+        dealer.hit(player: self)
     }
     
-    func stand(dealer:Dealer) {
-        dealer.stand(self)
+    func stand(dealer: Dealer) {
+        dealer.stand(player: self)
     }
     
     // total when counting Aces as 1
@@ -147,25 +149,25 @@ class BlackjackPlayer {
         var total = 0
         for card in hand {
             switch card.value {
-            case .Ace:
+            case .ace:
                 total += 1
-            case .Two:
+            case .two:
                 total += 2
-            case .Three:
+            case .three:
                 total += 3
-            case .Four:
+            case .four:
                 total += 4
-            case .Five:
+            case .five:
                 total += 5
-            case .Six:
+            case .six:
                 total += 6
-            case .Seven:
+            case .seven:
                 total += 7
-            case .Eight:
+            case .eight:
                 total += 8
-            case .Nine:
+            case .nine:
                 total += 9
-            case .Ten, .Jack, .Queen, .King:
+            case .ten, .jack, .queen, .king:
                 total += 10
             }
         }
@@ -177,7 +179,7 @@ class BlackjackPlayer {
     // We will cover closures and the filter method in the next part of the course!
     // Your solution may look similar to the definition of lowTotal above.
     private var highTotal: Int {
-        let aces = hand.filter { $0.value == .Ace}
+        let aces = hand.filter { $0.value == .ace}
         return lowTotal + (aces.count * 10)
     }
     
@@ -200,13 +202,13 @@ class Dealer:BlackjackPlayer {
     func startGame() {
         // Deal a hand to my opponents and myself.
         for player in opponents {
-            dealTo(player)
+            dealTo(player: player)
         }
-        dealTo(self)
+        dealTo(player: self)
         
         // Start with player "0"
         activeOpponentIndex = 0
-        opponents[activeOpponentIndex].playTurn(self)
+        opponents[activeOpponentIndex].playTurn(dealer: self)
     }
     
     func dealTo(player: BlackjackPlayer) {
@@ -219,32 +221,32 @@ class Dealer:BlackjackPlayer {
     }
 
     // TODO: implement playTurn
-    override func playTurn(dealer: Dealer) {
+    func playTurn(player: BlackjackPlayer) {
         // the blackjack dealer always has to hit if hand is < 17 points, else stand
         while(highTotal < 17) {
-            hit(dealer)
+            hit(player: player)
         }
-        stand(dealer)
+        stand(player: player)
     }
     
-    override func hit(player: BlackjackPlayer) {
+    func hit(player: BlackjackPlayer) {
         if var card = deck.cards.popLast() {
             card.isFaceDown = false
             player.hand.append(card)
         }
     }
     
-    override func stand(player: BlackjackPlayer) {
+    func stand(player: BlackjackPlayer) {
         if let _ = player as? Dealer {
             // I (the dealer) just finished my turn. Time to see who the winner is!
             endRound()
         } else if activeOpponentIndex < opponents.count - 1 {
             // It's the next player's turn.
             activeOpponentIndex += 1
-            opponents[activeOpponentIndex].playTurn(self)
+            opponents[activeOpponentIndex].playTurn(dealer: self)
         } else {
             // It's the dealer's turn (my turn).
-            playTurn(self)
+            playTurn(player: self)
         }
     }
     

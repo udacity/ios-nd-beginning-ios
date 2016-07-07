@@ -2,7 +2,7 @@
 //: In these exercise, you will be given the description for functions and their expected output assuming they are implemented correctly. It will be your job to finish the implementations.
 //: ### Exercise 1
 //: The function `emojiLove` should take two `String` parameters and use them to print a `String` with  the format "stringParameterOne ❤️ stringParameterTwo".
-func emojiLove(s1 s1: String, s2: String) {
+func emojiLove(s1: String, s2: String) {
     print(s1 + " ❤️ " + s2)
 }
 
@@ -22,7 +22,7 @@ emojiLove(s1: "ying", s2: "yang")
 
 //: ### Exercise 2
 //: The function `median` should take three `Int` parameters and return the `Int` value in the middle.
-func median(num1 num1: Int, num2: Int, num3: Int) -> Int {
+func median(num1: Int, num2: Int, num3: Int) -> Int {
     
     if num1 < num2 {            // partial order = num1, num2
         if num2 < num3 {
@@ -79,7 +79,7 @@ First, you will want to test if the input string is "". If the input string is "
 **It is assumed that the input string is given in English.**
 
 */
-func beginsWithVowel(s: String) -> Bool {
+func beginsWithVowel(_ s: String) -> Bool {
     if s == "" {
         return false
     } else {
@@ -119,11 +119,11 @@ To uppercase a `String`, use `nameOfString.uppercaseString`. To lowercase a `Str
 
 Hint: Re-use the `beginsWithVowel` function.
 */
-func funWithWords(s1: String) -> String {
+func funWithWords(_ s1: String) -> String {
     if beginsWithVowel(s1) {
-        return s1.uppercaseString
+        return s1.uppercased()
     } else {
-        return s1.lowercaseString
+        return s1.lowercased()
     }
     
 }
