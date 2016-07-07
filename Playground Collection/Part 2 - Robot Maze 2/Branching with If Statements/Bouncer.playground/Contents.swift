@@ -17,18 +17,18 @@ var ayush = Clubgoer(name: "Ayush", age: 19, onGuestList: true)
 var gabrielle = Clubgoer(name: "Gabrielle", age: 29, onGuestList: true)
 var chris = Clubgoer(name: "Chris", age: 32, onGuestList: false)
 
-func admit(person: Clubgoer) {
+func admit(_ person: Clubgoer) {
     print("\(person.name), come and party with us!")
 }
 
-func deny(person: Clubgoer) {
+func deny(_ person: Clubgoer) {
     print("Sorry, \(person.name), maybe you can go play Bingo with the Android team.")
 }
 
-func screen(person: Clubgoer) {
+func screen(_ person: Clubgoer) {
 // TODO: Add your if statement here!
 }
 
-func screenUnder21(person: Clubgoer) {
+func screenUnder21(_ person: Clubgoer) {
 // TODO: Add your if statement here!
 }
