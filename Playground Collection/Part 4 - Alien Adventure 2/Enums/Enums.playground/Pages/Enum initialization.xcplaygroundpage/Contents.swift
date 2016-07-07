@@ -4,23 +4,23 @@
 
 // As you saw in the previous example, enums may be initialized by assigning a specific member of the enum to a variable or constant.
 enum CaliforniaPark {
-    case Yosemite, DeathValley, Lasson, Sequoia
+    case yosemite, deathValley, lasson, sequoia
 }
-var destination = CaliforniaPark.Yosemite
+var destination = CaliforniaPark.yosemite
 
 // Enum types may also be initialized with rawValues.
 enum MazeDirection: Int {
-    case Up = 0, Right, Down, Left
+    case up = 0, right, down, left
 }
 
 var currentDirection = MazeDirection(rawValue: 0)
 
 enum AmericanLeagueWest: String {
-    case As = "Oakland"
-    case Astros = "Houston"
-    case Angels = "Los Angeles"
-    case Mariners = "Seattle"
-    case Rangers = "Arlington"
+    case athletics = "Oakland"
+    case astros = "Houston"
+    case angels = "Los Angeles"
+    case mariners = "Seattle"
+    case rangers = "Arlington"
 }
 
 let myFavoriteTeam = AmericanLeagueWest(rawValue: "Oakland")

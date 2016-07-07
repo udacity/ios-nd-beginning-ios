@@ -33,6 +33,6 @@ myFailingGrades
 
 // Example 2
 var soups = ["tomato", "hot and sour", "french onion", "vegetable"]
-var alphabeticalSoup = soups.sort({ (soup1, soup2) in
+var alphabeticalSoup = soups.sort(isOrderedBefore: { (soup1, soup2) in
     return soup2 > soup1
 })

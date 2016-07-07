@@ -18,8 +18,8 @@ protocol PlayingCard {
 struct Joker: PlayingCard {
     
     enum Color {
-        case Red
-        case Black
+        case red
+        case black
     }
     
     let color: Color
@@ -32,9 +32,9 @@ struct Joker: PlayingCard {
         }
         
         switch color {
-        case .Red:
+        case .red:
             return "R 🃏"
-        case .Black:
+        case .black:
             return "B 🃏"
         }
     }
@@ -44,26 +44,26 @@ struct Joker: PlayingCard {
 struct SuitedCard: PlayingCard {
     
     enum Suit {
-        case Hearts
-        case Spades
-        case Diamonds
-        case Clubs
+        case hearts
+        case spades
+        case diamonds
+        case clubs
     }
     
     enum Value {
-        case Two
-        case Three
-        case Four
-        case Five
-        case Six
-        case Seven
-        case Eight
-        case Nine
-        case Ten
-        case Jack
-        case Queen
-        case King
-        case Ace
+        case two
+        case three
+        case four
+        case five
+        case six
+        case seven
+        case eight
+        case nine
+        case ten
+        case jack
+        case queen
+        case king
+        case ace
     }
     
     let suit: Suit
@@ -71,44 +71,44 @@ struct SuitedCard: PlayingCard {
     
     var suitDisplay: String {
         switch self.suit {
-        case .Hearts:
+        case .hearts:
             return "♥"
-        case .Spades:
+        case .spades:
             return "♠"
-        case .Diamonds:
+        case .diamonds:
             return "♦"
-        case .Clubs:
+        case .clubs:
             return "♣"
         }
     }
     
     var valueDisplay: String {
         switch self.value {
-        case .Two:
+        case .two:
             return "2"
-        case .Three:
+        case .three:
             return "3"
-        case .Four:
+        case .four:
             return "4"
-        case .Five:
+        case .five:
             return "5"
-        case .Six:
+        case .six:
             return "6"
-        case .Seven:
+        case .seven:
             return "7"
-        case .Eight:
+        case .eight:
             return "8"
-        case .Nine:
+        case .nine:
             return "9"
-        case .Ten:
+        case .ten:
             return "10"
-        case .Jack:
+        case .jack:
             return "J"
-        case .Queen:
+        case .queen:
             return "Q"
-        case .King:
+        case .king:
             return "K"
-        case .Ace:
+        case .ace:
             return "A"
         }
     }
@@ -129,8 +129,8 @@ struct SuitedCard: PlayingCard {
     }
 }
 
-let suits:[SuitedCard.Suit] = [.Hearts, .Diamonds, .Clubs, .Spades]
-let values:[SuitedCard.Value] = [.Two, .Three, .Four, .Five, .Six, .Seven, .Eight, .Nine, .Ten, .Jack, .Queen, .King, .Ace]
+let suits:[SuitedCard.Suit] = [.hearts, .diamonds, .clubs, .spades]
+let values:[SuitedCard.Value] = [.two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .jack, .queen, .king, .ace]
 
 struct Deck {
     var cards: [PlayingCard] = []
@@ -142,8 +142,8 @@ struct Deck {
             }
         }
         
-        cards.append(Joker(color: .Red, isFaceDown: true))
-        cards.append(Joker(color: .Black, isFaceDown: true))
+        cards.append(Joker(color: .red, isFaceDown: true))
+        cards.append(Joker(color: .black, isFaceDown: true))
         
         shuffle()
     }

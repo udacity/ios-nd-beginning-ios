@@ -2,7 +2,7 @@
 /*:
 ## Function Scope
 */
-func averageScore(firstScore: Double, secondScore: Double, thirdScore: Double) {
+func averageScore(_ firstScore: Double, secondScore: Double, thirdScore: Double) {
     let totalScore = firstScore + secondScore + thirdScore
     print(totalScore / 3)
 }

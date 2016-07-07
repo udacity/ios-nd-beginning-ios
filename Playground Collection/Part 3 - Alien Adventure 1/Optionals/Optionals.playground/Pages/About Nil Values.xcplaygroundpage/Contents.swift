@@ -8,7 +8,7 @@ var x: Int
 
 // Object references can't store nil values either
 var c: AnyObject
-c = UIColor.redColor()
+c = UIColor.red()
 //c = nil
 
 //: ### Cool! Except, sometimes we need nil values.
@@ -40,9 +40,9 @@ func pickUpGroceries(car:Car?) {
 }
 
 var someCar = Car(make: "Toyota", model: "Corolla")
-pickUpGroceries(someCar)
+pickUpGroceries(car: someCar)
 
-pickUpGroceries(nil)
+pickUpGroceries(car: nil)
 
 // Example: Hosting a guest in an optional extra room
 func host(guest: String, extraRoom: Room?) {
@@ -54,5 +54,5 @@ func host(guest: String, extraRoom: Room?) {
 }
 
 var someRoom = Room(name: "guest room", occupied: false)
-host("Grandma", extraRoom: someRoom)
-host("Ryan", extraRoom: nil)
+host(guest: "Grandma", extraRoom: someRoom)
+host(guest: "Ryan", extraRoom: nil)

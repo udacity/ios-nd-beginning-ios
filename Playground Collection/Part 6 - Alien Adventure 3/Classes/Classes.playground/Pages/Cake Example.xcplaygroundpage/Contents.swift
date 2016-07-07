@@ -36,13 +36,13 @@ func cakeStatus(cakeHaver: CakeHaver) {
 
 // Because this call to the eatCake func operators on a CakeHaverStruct (value type) it modifies a copy.
 var valueType = CakeHaverStruct()
-eatCake(valueType)
-cakeStatus(valueType) // Prints "Cake is still had"
+eatCake(cakeHaver: valueType)
+cakeStatus(cakeHaver: valueType) // Prints "Cake is still had"
 
 // But in this example eatCake is called on a CakeHaverClass (reference type) and it directly modifies the object.
 var referenceType = CakeHaverClass()
-eatCake(referenceType)
-cakeStatus(referenceType) // Prints "No more cake"
+eatCake(cakeHaver: referenceType)
+cakeStatus(cakeHaver: referenceType) // Prints "No more cake"
 
 //: [Next](@next)
 

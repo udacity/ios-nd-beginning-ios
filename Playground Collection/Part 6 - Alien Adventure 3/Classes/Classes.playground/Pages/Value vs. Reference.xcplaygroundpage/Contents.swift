@@ -36,7 +36,7 @@ class Musician {
             // Our musician plays the notes exactly "as written."
             // But other musician implementations could manipulate
             // the note, by using vibrato, adding a swing feel, etc.
-            instrument.playNote(note)
+            instrument.playNote(note: note)
         }
     }
 }
@@ -55,7 +55,7 @@ struct MusicianStruct {
             // Our musician plays the notes exactly "as written."
             // But other musician implementations could manipulate
             // the note, by using vibrato, adding a swing feel, etc.
-            instrument.playNote(note)
+            instrument.playNote(note: note)
         }
     }
 }
@@ -73,7 +73,7 @@ func prepareForDuelingBanjos(musician: MusicianStruct) {
 let musicianStruct = MusicianStruct(instrument: Fiddle())
 
 // Because this call to the prepareForDuelingBanjos func operators on a MusicianStruct (value type) it modifies a copy of the musician parameter.
-prepareForDuelingBanjos(musicianStruct)
+prepareForDuelingBanjos(musician: musicianStruct)
 
 // Therefore the musicianStruct's instrument does not change!
 musicianStruct.instrument
@@ -81,7 +81,7 @@ musicianStruct.instrument
 // But in this example prepareForDuelingBanjos is called using a Musician (reference type) and the instrument is changed!
 let duo = [Musician(instrument: Fiddle()), Musician(instrument: Banjo())]
 let musician = duo[0]
-prepareForDuelingBanjos(musician)
+prepareForDuelingBanjos(musician: musician)
 musician.instrument
 
 //: [Next](@next)

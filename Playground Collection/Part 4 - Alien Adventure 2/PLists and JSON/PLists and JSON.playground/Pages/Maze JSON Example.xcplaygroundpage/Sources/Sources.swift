@@ -1,7 +1,7 @@
 import Foundation
 
-enum MazeCellDirection: Int {
-    case Top = 0, Right, Bottom, Left
+public enum MazeCellDirection: Int {
+    case top = 0, right, bottom, left
 }
 
 public func visualizeMaze(mazeDictionary: NSDictionary) -> String {
@@ -21,36 +21,36 @@ public func visualizeMaze(mazeDictionary: NSDictionary) -> String {
     }
 }
 
-func makeMazeString(rows rows: Int, columns: Int, cellData: [[[Bool]]]) -> String {
+public func makeMazeString(rows: Int, columns: Int, cellData: [[[Bool]]]) -> String {
     
     var finalStr: String = ""
     
     for r in 0..<rows {
         
+        // add the top section
         for c in 0..<columns {
-            finalStr += makeTopOrBottomSection(cellData[r][c], direction: .Top)
+            finalStr += makeTopOrBottomSection(cellData: cellData[r][c], direction: .top)
         }
-        
         finalStr += "\n"
         
+        // add the middle section
         for c in 0..<columns {
             let isStar = (r == 1 && c == 0) ? true : false
-            finalStr += makeMidSection(cellData[r][c], isStar: isStar)
+            finalStr += makeMidSection(cellData: cellData[r][c], isStar: isStar)
         }
-        
         finalStr += "\n"
         
+        // add the bottom section
         for c in 0..<columns {
-            finalStr += makeTopOrBottomSection(cellData[r][c], direction: .Bottom)
+            finalStr += makeTopOrBottomSection(cellData: cellData[r][c], direction: .bottom)
         }
-        
         finalStr += "\n"
     }
     
     return finalStr
 }
 
-func makeTopOrBottomSection(cellData: [Bool], direction: MazeCellDirection) -> String {
+public func makeTopOrBottomSection(cellData: [Bool], direction: MazeCellDirection) -> String {
     if(cellData[direction.rawValue] == true) {
         return "⬛️⬛️⬛️"
     } else {
@@ -58,14 +58,14 @@ func makeTopOrBottomSection(cellData: [Bool], direction: MazeCellDirection) -> S
     }
 }
 
-func makeMidSection(cellData: [Bool], isStar: Bool) -> String {
+public func makeMidSection(cellData: [Bool], isStar: Bool) -> String {
     let middleCell = (isStar) ? "🔶" : "◻️"
     
-    if(cellData[1] == true && cellData[3] == true) {
+    if(cellData[MazeCellDirection.right.rawValue] == true && cellData[MazeCellDirection.left.rawValue] == true) {
         return "⬛️\(middleCell)⬛️"
-    } else if(cellData[1] == true && cellData[3] == false) {
+    } else if(cellData[MazeCellDirection.right.rawValue] == true && cellData[MazeCellDirection.left.rawValue] == false) {
         return "◻️\(middleCell)⬛️"
-    } else if(cellData[1] == false && cellData[3] == true) {
+    } else if(cellData[MazeCellDirection.right.rawValue] == false && cellData[MazeCellDirection.left.rawValue] == true) {
         return "⬛️\(middleCell)◻️"
     } else {
         return "◻️\(middleCell)◻️"

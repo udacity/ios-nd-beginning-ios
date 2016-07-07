@@ -40,13 +40,13 @@ let jarrod = UdacityStudent(name: "Jarrod", username: "jarrod", userID: 1)
 let james = UdacityStudent(name: nil, username: "james", userID: 2)
 let john = UdacityStudent(name: nil, username: nil, userID: 3)
 
-getDisplayName(jarrod)
-getDisplayNameNilCoalesing(jarrod)
+getDisplayName(student: jarrod)
+getDisplayNameNilCoalesing(student: jarrod)
 
-getDisplayName(james)
-getDisplayNameNilCoalesing(james)
+getDisplayName(student: james)
+getDisplayNameNilCoalesing(student: james)
 
-getDisplayName(john)
-getDisplayNameNilCoalesing(john)
+getDisplayName(student: john)
+getDisplayNameNilCoalesing(student: john)
 
 //: [Next](@next)

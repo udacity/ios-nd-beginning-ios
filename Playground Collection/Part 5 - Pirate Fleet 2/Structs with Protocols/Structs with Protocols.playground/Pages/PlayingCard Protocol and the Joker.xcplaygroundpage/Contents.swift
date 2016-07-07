@@ -18,8 +18,8 @@ protocol PlayingCard {
 struct Joker: PlayingCard {
     
     enum Color {
-        case Red
-        case Black
+        case red
+        case black
     }
     
     let color: Color
@@ -32,15 +32,15 @@ struct Joker: PlayingCard {
         }
         
         switch color {
-        case .Red:
+        case .red:
             return "R 🃏"
-        case .Black:
+        case .black:
             return "B 🃏"
         }
     }
 }
 
-var redJoker = Joker(color: .Red, isFaceDown: false)
+var redJoker = Joker(color: .red, isFaceDown: false)
 redJoker.shortName
 redJoker.isFaceDown = true
 redJoker.shortName

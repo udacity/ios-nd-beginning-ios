@@ -19,7 +19,7 @@ func exampleFunctionOne() {
 
 *}*
 */
-func exampleFunctionTwo(intParameter: Int) {
+func exampleFunctionTwo(_ intParameter: Int) {
     // body of the function here
 }
 
@@ -30,7 +30,7 @@ func exampleFunctionTwo(intParameter: Int) {
 
 *}*
 */
-func exampleFunctionThree(intParameterOne: Int, intParameterTwo: Int) {
+func exampleFunctionThree(_ intParameterOne: Int, intParameterTwo: Int) {
     // body of the function here
 }
 

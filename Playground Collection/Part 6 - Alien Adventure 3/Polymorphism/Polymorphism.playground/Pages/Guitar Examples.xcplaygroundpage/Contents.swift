@@ -24,7 +24,7 @@ class ElectricGuitar: Guitar {
         } else if volumeLevel > 0 {
             print("🎸 twang")
         } else { // volumeLevel is 0
-            super.pluckString(string)
+            super.pluckString(string: string)
         }
     }
 }
@@ -33,18 +33,18 @@ class ElectricGuitar: Guitar {
 class FlyingV: ElectricGuitar {
     func shred() {
         let string = GuitarString()
-        pluckString(string)
-        pluckString(string)
-        pluckString(string)
-        pluckString(string)
+        pluckString(string: string)
+        pluckString(string: string)
+        pluckString(string: string)
+        pluckString(string: string)
     }
 }
 
 var guitar:Guitar = Guitar()
-guitar.pluckString(GuitarString())
+guitar.pluckString(string: GuitarString())
 
 // Time to shred!!
 guitar = FlyingV()
-guitar.pluckString(GuitarString())
+guitar.pluckString(string: GuitarString())
 
 //: [Next](@next)

@@ -1,6 +1,6 @@
 import Foundation
 
-public func randomBonus(from from: Int, to: Int) -> Int {
+public func randomBonus(_ from: Int, to: Int) -> Int {
     
     var range: UInt32 = 0
     

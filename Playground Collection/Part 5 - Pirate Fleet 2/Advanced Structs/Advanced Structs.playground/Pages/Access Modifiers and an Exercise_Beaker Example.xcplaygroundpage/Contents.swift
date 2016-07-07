@@ -34,7 +34,7 @@ struct Beaker {
     }
     
     // Adds contents to the beaker without overflowing the beaker's volume.
-    mutating func addContents(name: String, amount: Double) {
+    mutating func addContents(_ name: String, amount: Double) {
         let amountWithoutOverflowing = min(availableMilliliters, amount)
         if let existingAmount = contents[name] {
             contents[name] = existingAmount + amountWithoutOverflowing

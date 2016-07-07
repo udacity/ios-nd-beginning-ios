@@ -14,7 +14,7 @@ var jessica = Student(name: "Jessica", age: 21, school: "University of Wisconsin
 var jarrod = Student(name: "Jarrod", age: 19, school: "University of Alabama-Huntsville")
 
 //: Defining and using a function with parameters.
-func sayHelloToStudent(student: Student) {
+func sayHelloToStudent(_ student: Student) {
     print("Hello, \(student.name)!")
 }
 

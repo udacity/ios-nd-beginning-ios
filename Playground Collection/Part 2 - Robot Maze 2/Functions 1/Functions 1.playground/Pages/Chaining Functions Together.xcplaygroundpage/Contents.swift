@@ -2,7 +2,7 @@
 /*:
 ## Chaining Functions Together
 */
-func addExcitementToString(string: String) -> String {
+func addExcitementToString(_ string: String) -> String {
     return string + "!"
 }
 

@@ -11,8 +11,8 @@ struct Student {
 //: This code creates an array of dictionaries from a file called Students.plist that is bundled with this playground.
 import Foundation
 
-let studentPList = NSBundle.mainBundle().URLForResource("Students", withExtension: "plist")!
-let studentArray = NSArray(contentsOfURL: studentPList)!
+let studentPList = Bundle.main().urlForResource("Students", withExtension: "plist")!
+let studentArray = NSArray(contentsOf: studentPList)!
 
 //: This code uses the array of dictionaries (studentArray) to create an array of Student structs called studentStructs.
 var studentStructs = [Student]()

@@ -4,18 +4,18 @@
 
 // Primary colors
 enum PrimaryColor {
-    case Red
-    case Blue
-    case Yellow
+    case red
+    case blue
+    case yellow
 }
 
 // Baseball teams of the American League West
 enum AmericanLeagueWest {
-    case As
-    case Astros
-    case Angels
-    case Mariners
-    case Rangers
+    case athletics
+    case astros
+    case angels
+    case mariners
+    case rangers
 }
 
 //: [Next](@next)

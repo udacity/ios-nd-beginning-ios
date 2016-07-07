@@ -25,7 +25,7 @@ class Musician {
             // Our musician plays the notes exactly "as written."
             // But other musician implementations could manipulate
             // the note, by using vibrato, adding a swing feel, etc.
-            instrument.playNote(note)
+            instrument.playNote(note: note)
         }
     }
 }

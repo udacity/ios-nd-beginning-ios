@@ -5,7 +5,7 @@ import Foundation
 //: ### Exercise 1
 //: Recreate the shoutString by using the didYouKnowString as a stem.
 let didYouKnowString = "Did you know that the Swift String class comes with lots of useful methods?"
-let whisperString = "psst" + ", " + didYouKnowString.lowercaseString
+let whisperString = "psst" + ", " + didYouKnowString.lowercased()
 let shoutString =  "HEY! DID YOU KNOW THAT THE SWIFT STRING CLASS COMES WITH LOTS OF USEFUL METHODS?"
 
 //: ### Exercise 2

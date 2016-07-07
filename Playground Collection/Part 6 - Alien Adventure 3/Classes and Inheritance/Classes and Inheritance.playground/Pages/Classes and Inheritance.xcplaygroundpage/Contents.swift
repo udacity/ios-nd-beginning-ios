@@ -43,9 +43,9 @@ class Guitar: Instrument {
     }
     
     func playNote(note: Note) {
-        let string = stringForNote(note)
-        fretNote(note, onString: string)
-        pluckString(string)
+        let string = stringForNote(note: note)
+        fretNote(note: note, onString: string)
+        pluckString(string: string)
     }
 }
 
@@ -63,7 +63,7 @@ class ElectricGuitar: Guitar {
         } else if volumeLevel > 0 {
             print("🎸 twang")
         } else { // volumeLevel is 0
-            super.pluckString(string)
+            super.pluckString(string: string)
         }
         // TODO: incorporate tone.
     }
@@ -72,13 +72,13 @@ class ElectricGuitar: Guitar {
 // NOTE: To see the output, make sure the Debug Area is revealed (toggle with Shift+Command+Y).
 
 let guitar = Guitar(frets: [Fret()], strings: [GuitarString()])
-guitar.playNote(Note())
+guitar.playNote(note: Note())
 
 let electric = ElectricGuitar(frets: [Fret()], strings: [GuitarString()])
-electric.playNote(Note())
+electric.playNote(note: Note())
 
 var anyGuitar:Guitar = Guitar(frets: [Fret()], strings: [GuitarString()])
-anyGuitar.playNote(Note())
+anyGuitar.playNote(note: Note())
 
 anyGuitar = electric
-anyGuitar.playNote(Note())
+anyGuitar.playNote(note: Note())

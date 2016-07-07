@@ -9,26 +9,26 @@ import Foundation
 struct SuitedCard {
     
     enum Suit {
-        case Hearts
-        case Spades
-        case Diamonds
-        case Clubs
+        case hearts
+        case spades
+        case diamonds
+        case clubs
     }
     
     enum Value {
-        case Two
-        case Three
-        case Four
-        case Five
-        case Six
-        case Seven
-        case Eight
-        case Nine
-        case Ten
-        case Jack
-        case Queen
-        case King
-        case Ace
+        case two
+        case three
+        case four
+        case five
+        case six
+        case seven
+        case eight
+        case nine
+        case ten
+        case jack
+        case queen
+        case king
+        case ace
     }
     
     let suit: Suit
@@ -37,20 +37,20 @@ struct SuitedCard {
     // The suitDisplay is a value that can be derived from information already in the struct (the suit)
     var suitDisplay: String {
         switch self.suit {
-        case .Hearts:
+        case .hearts:
             return "♥"
-        case .Spades:
+        case .spades:
             return "♠"
-        case .Diamonds:
+        case .diamonds:
             return "♦"
-        case .Clubs:
+        case .clubs:
             return "♣"
         }
     }
 }
 
 //: Example use of `SuitedCard`'s computed property `suitDisplay`.
-let s = SuitedCard(suit: .Hearts, value: .Ace)
+let s = SuitedCard(suit: .hearts, value: .ace)
 s.suitDisplay
 
 //: [Next](@next)

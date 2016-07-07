@@ -20,12 +20,12 @@ print(spaniels.count)
 //: Insert "indigo" into the array below so that its index is after "blue" and before "violet".
 var colors = ["red", "orange", "yellow", "green", "blue", "violet"]
 // Solution
-colors.insert("indigo", atIndex: 5)
+colors.insert("indigo", at: 5)
 
 //: ### Exercise 4
 //: Insert "English Cocker" into the spaniels array so that its index is before "English Springer".
 // Solution
-spaniels.insert("English Cocker", atIndex: 2)
+spaniels.insert("English Cocker", at: 2)
 
 //: ### Exercise 5
 //: Append "Barcelona" to the end of the olympicHosts array.
@@ -38,9 +38,9 @@ olympicHosts.append("Barcelona")
 var admitted = ["Jennifer", "Vijay", "James"]
 var waitingList = ["Lyla", "Daniel", "Isabel", "Eric"]
 // Solution
-var name = waitingList.removeAtIndex(0)
+var name = waitingList.remove(at: 0)
 admitted.append(name)
-var anotherName = waitingList.removeAtIndex(0)
+var anotherName = waitingList.remove(at: 0)
 admitted.append(anotherName)
 
 //: ### Exercise 7

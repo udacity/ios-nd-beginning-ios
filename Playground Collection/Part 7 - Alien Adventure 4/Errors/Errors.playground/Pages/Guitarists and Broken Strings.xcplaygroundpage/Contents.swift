@@ -20,7 +20,7 @@ struct GuitarString {
     var broken: Bool = false
     var outOfTune: Bool = false
     
-    enum Error: ErrorType {
+    enum Error: ErrorProtocol {
         case Broken
         case OutOfTune
     }
@@ -78,14 +78,14 @@ class Guitar {
     }
     
     func playNote(note: Note) throws {
-        var string = stringForNote(note)
-        fretNote(note, onString: string)
-        try pluckString(&string, velocity: note.velocity)
+        var string = stringForNote(note: note)
+        fretNote(note: note, onString: string)
+        try pluckString(string: &string, velocity: note.velocity)
     }
     
-    func pluckString(inout string: GuitarString, velocity: Float) throws {
+    func pluckString(string: inout GuitarString, velocity: Float) throws {
         // Pluck the note (typically the right hand).
-        try string.pluck(velocity)
+        try string.pluck(velocity: velocity)
     }
 }
 
@@ -95,7 +95,7 @@ class Guitarist {
     func perform(notes: [Note]) {
         for note in notes {
             do {
-                try guitar.playNote(note)
+                try guitar.playNote(note: note)
             } catch GuitarString.Error.Broken {
                 // quick, replace the string!
             } catch GuitarString.Error.OutOfTune {

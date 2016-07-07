@@ -7,15 +7,15 @@ struct House {
     let numberOfBathrooms: Int
 }
 
-func doubleMe(number: Int) -> Int {
+func doubleMe(_ number: Int) -> Int {
     return number * 2
 }
 
-func doubleMe(string: String) -> String {
+func doubleMe(_ string: String) -> String {
     return string + string
 }
 
-func doubleMe(house: House) -> House {
+func doubleMe(_ house: House) -> House {
     return House(numberOfBedrooms: house.numberOfBedrooms * 2, numberOfBathrooms: house.numberOfBathrooms * 2)
 }
 

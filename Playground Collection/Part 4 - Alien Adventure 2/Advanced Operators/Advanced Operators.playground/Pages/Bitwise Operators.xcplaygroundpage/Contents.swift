@@ -77,9 +77,9 @@ let redComponent = (pink & 0xFF0000) // equals 0xCC0000
 let greenComponent = (pink & 0x00FF00) // equals 0x006600
 let blueComponent = (pink & 0x0000FF) // equals 0x000099
 
-colorFromHex(pink)
-colorFromHex(redComponent)
-colorFromHex(greenComponent)
-colorFromHex(blueComponent)
+colorFromHex(hexValue: pink)
+colorFromHex(hexValue: redComponent)
+colorFromHex(hexValue: greenComponent)
+colorFromHex(hexValue: blueComponent)
 
 //: [Next](@next)

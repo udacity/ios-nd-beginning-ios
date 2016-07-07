@@ -10,7 +10,7 @@ Hence, we can index each values using a `MazeCellDirection's` rawValue.
 `mazeCellModelAsBoolArray[MazeCellDirection.Top.rawValue]` would give us the first value in the `mazeCellModelAsBoolArray`.
 */
 enum MazeCellDirection: Int {
-    case Top = 0, Right, Bottom, Left
+    case top = 0, right, bottom, left
 }
 
 //: This function takes an `NSDictionary` (essentially a `Dictionary` with type `[String:AnyObject]`) that represents a maze, and then creates a `String` of walls (⬛️) and openings/paths (◻️) which visualizes the maze.
@@ -45,7 +45,7 @@ To build the `String`, it generates each row in sections: a top section, a middl
 
 Note: The `makeMazeString` function also inserts a "star" in a hardcoded location.
 */
-func makeMazeString(rows rows: Int, columns: Int, cellData: [[[Bool]]]) -> String {
+func makeMazeString(rows: Int, columns: Int, cellData: [[[Bool]]]) -> String {
     
     var finalStr: String = ""
     
@@ -53,20 +53,20 @@ func makeMazeString(rows rows: Int, columns: Int, cellData: [[[Bool]]]) -> Strin
         
         // add the top section
         for c in 0..<columns {
-            finalStr += makeTopOrBottomSection(cellData[r][c], direction: .Top)
+            finalStr += makeTopOrBottomSection(cellData: cellData[r][c], direction: .top)
         }
         finalStr += "\n"
         
         // add the middle section
         for c in 0..<columns {
             let isStar = (r == 1 && c == 0) ? true : false
-            finalStr += makeMidSection(cellData[r][c], isStar: isStar)
+            finalStr += makeMidSection(cellData: cellData[r][c], isStar: isStar)
         }
         finalStr += "\n"
         
         // add the bottom section
         for c in 0..<columns {
-            finalStr += makeTopOrBottomSection(cellData[r][c], direction: .Bottom)
+            finalStr += makeTopOrBottomSection(cellData: cellData[r][c], direction: .bottom)
         }
         finalStr += "\n"
     }
@@ -85,11 +85,11 @@ func makeTopOrBottomSection(cellData: [Bool], direction: MazeCellDirection) -> S
 func makeMidSection(cellData: [Bool], isStar: Bool) -> String {
     let middleCell = (isStar) ? "🔶" : "◻️"
     
-    if(cellData[MazeCellDirection.Right.rawValue] == true && cellData[MazeCellDirection.Left.rawValue] == true) {
+    if(cellData[MazeCellDirection.right.rawValue] == true && cellData[MazeCellDirection.left.rawValue] == true) {
         return "⬛️\(middleCell)⬛️"
-    } else if(cellData[MazeCellDirection.Right.rawValue] == true && cellData[MazeCellDirection.Left.rawValue] == false) {
+    } else if(cellData[MazeCellDirection.right.rawValue] == true && cellData[MazeCellDirection.left.rawValue] == false) {
         return "◻️\(middleCell)⬛️"
-    } else if(cellData[MazeCellDirection.Right.rawValue] == false && cellData[MazeCellDirection.Left.rawValue] == true) {
+    } else if(cellData[MazeCellDirection.right.rawValue] == false && cellData[MazeCellDirection.left.rawValue] == true) {
         return "⬛️\(middleCell)◻️"
     } else {
         return "◻️\(middleCell)◻️"
@@ -97,10 +97,10 @@ func makeMidSection(cellData: [Bool], isStar: Bool) -> String {
 }
 
 //: Load the contents of Maze1.plist into an `NSDictionary` and visualize the maze!
-let mazePListURL = NSBundle.mainBundle().URLForResource("Maze1", withExtension: "plist")!
-let mazeDictionaryFromPList = NSDictionary(contentsOfURL: mazePListURL)
+let mazePListURL = Bundle.main().urlForResource("Maze1", withExtension: "plist")!
+let mazeDictionaryFromPList = NSDictionary(contentsOf: mazePListURL)
 
 if let mazeDictionaryFromPList = mazeDictionaryFromPList {
-    visualizeMaze(mazeDictionaryFromPList)
+    visualizeMaze(mazeDictionary: mazeDictionaryFromPList)
 }
 //: [Next](@next)

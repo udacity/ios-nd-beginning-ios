@@ -24,7 +24,7 @@ var jarrod = Student(name: "Jarrod", age: 19, school: "University of Alabama-Hun
 
 Here's an example:
 */
-func greet(student student: Student, lateForClass: Bool) {
+func greet(student: Student, lateForClass: Bool) {
     if lateForClass {
         print("\(student.name)... you're late 😠!")
     } else {

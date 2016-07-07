@@ -13,13 +13,13 @@
 //: Finish the commented switch statement below by writing a case for each season. In each executable statement define the variable `favoriteActivity` to be your favorite activity during a given season.
 
 enum Season {
-    case Fall
-    case Winter
-    case Spring
-    case Summer
+    case fall
+    case winter
+    case spring
+    case summer
 }
 
-var myFavoriteSeason = Season.Fall
+var myFavoriteSeason = Season.fall
 var favoriteActivity = ""
 
 //switch (myFavoriteSeason) {
@@ -31,16 +31,16 @@ var favoriteActivity = ""
 //: __3a.__ Assign rawValues to each member of the enum, Weather. The rawValue should be a string indicating the appropriate accessory or attire for that weather. For, example, `case Snow = "parka"`.
 
 enum Weather {
-    case Rain
-    case Sun
-    case Snow
-    case Wind
+    case rain
+    case sun
+    case snow
+    case wind
 }
 
 //: __3b.__ Using string interpolation and one of the rawValues you just assigned, recreate this reminder for a friend who is headed out into the elements.
 
 // TODO: Assign the current weather outside to the variable, currentWeather. 
-var currentWeather = Weather.Wind
+var currentWeather = Weather.wind
 
 // TODO: Replace "jacket" with string interpolation of a raw value
 var reminder = "Don't forget your jacket!"

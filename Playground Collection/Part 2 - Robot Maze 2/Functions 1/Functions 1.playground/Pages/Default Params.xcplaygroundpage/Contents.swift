@@ -2,7 +2,7 @@
 /*:
 ## Default Params
 */
-func calculatePriceForMealWithTip(priceOfMeal: Double, tipPercentage: Double = 0.15) -> Double {
+func calculatePriceForMealWithTip(_ priceOfMeal: Double, tipPercentage: Double = 0.15) -> Double {
     return priceOfMeal + (priceOfMeal * tipPercentage)
 }
 

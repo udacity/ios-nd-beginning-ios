@@ -24,7 +24,7 @@ let beaker2 = Beaker(volumeMilliliters: 500)
 beaker1.volumeOunces
 beaker2.volumeOunces
 
-beaker1.canCountainContents(beaker2)
-beaker2.canCountainContents(beaker1)
+beaker1.canCountainContents(otherBeaker: beaker2)
+beaker2.canCountainContents(otherBeaker: beaker1)
 
 //: [Next](@next)

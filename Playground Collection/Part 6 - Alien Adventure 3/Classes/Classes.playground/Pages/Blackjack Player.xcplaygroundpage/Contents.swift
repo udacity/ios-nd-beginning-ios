@@ -11,26 +11,26 @@ protocol PlayingCard {
 //: ### SuitedCard is-a PlayingCard
 struct SuitedCard: PlayingCard {
     enum Suit {
-        case Hearts
-        case Spades
-        case Diamonds
-        case Clubs
+        case hearts
+        case spades
+        case diamonds
+        case clubs
     }
     
     enum Value {
-        case Two
-        case Three
-        case Four
-        case Five
-        case Six
-        case Seven
-        case Eight
-        case Nine
-        case Ten
-        case Jack
-        case Queen
-        case King
-        case Ace
+        case two
+        case three
+        case four
+        case five
+        case six
+        case seven
+        case eight
+        case nine
+        case ten
+        case jack
+        case queen
+        case king
+        case ace
     }
     
     let suit: Suit
@@ -39,44 +39,44 @@ struct SuitedCard: PlayingCard {
     
     var suitDisplay: String {
         switch self.suit {
-        case .Hearts:
+        case .hearts:
             return "♥"
-        case .Spades:
+        case .spades:
             return "♠"
-        case .Diamonds:
+        case .diamonds:
             return "♦"
-        case .Clubs:
+        case .clubs:
             return "♣"
         }
     }
     
     var valueDisplay: String {
         switch self.value {
-        case .Two:
+        case .two:
             return "2"
-        case .Three:
+        case .three:
             return "3"
-        case .Four:
+        case .four:
             return "4"
-        case .Five:
+        case .five:
             return "5"
-        case .Six:
+        case .six:
             return "6"
-        case .Seven:
+        case .seven:
             return "7"
-        case .Eight:
+        case .eight:
             return "8"
-        case .Nine:
+        case .nine:
             return "9"
-        case .Ten:
+        case .ten:
             return "10"
-        case .Jack:
+        case .jack:
             return "J"
-        case .Queen:
+        case .queen:
             return "Q"
-        case .King:
+        case .king:
             return "K"
-        case .Ace:
+        case .ace:
             return "A"
         }
     }
@@ -95,8 +95,8 @@ struct SuitedCard: PlayingCard {
     }
 }
 
-let suits: [SuitedCard.Suit] = [.Hearts, .Diamonds, .Clubs, .Spades]
-let values: [SuitedCard.Value] = [.Two, .Three, .Four, .Five, .Six, .Seven, .Eight, .Nine, .Ten, .Jack, .Queen, .King, .Ace]
+let suits:[SuitedCard.Suit] = [.hearts, .diamonds, .clubs, .spades]
+let values:[SuitedCard.Value] = [.two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .jack, .queen, .king, .ace]
 
 //: ### Deck struct
 struct Deck {
@@ -127,36 +127,36 @@ class BlackjackPlayer {
     }
     
     func hit(dealer: Dealer) {
-        dealer.hit(self)
+        dealer.hit(player: self)
     }
     
     func stand(dealer: Dealer) {
-        dealer.stand(self)
+        dealer.stand(player: self)
     }
     
     func hasBusted() -> Bool {
         var total = 0
         for card in hand {
             switch card.value {
-            case .Ace:
+            case .ace:
                 total += 1
-            case .Two:
+            case .two:
                 total += 2
-            case .Three:
+            case .three:
                 total += 3
-            case .Four:
+            case .four:
                 total += 4
-            case .Five:
+            case .five:
                 total += 5
-            case .Six:
+            case .six:
                 total += 6
-            case .Seven:
+            case .seven:
                 total += 7
-            case .Eight:
+            case .eight:
                 total += 8
-            case .Nine:
+            case .nine:
                 total += 9
-            case .Ten, .Jack, .Queen, .King:
+            case .ten, .jack, .queen, .king:
                 total += 10
             }
         }
@@ -169,7 +169,7 @@ class Dealer: BlackjackPlayer {
     var deck = Deck()
     // TODO: init with all players
     
-    func dealTo(player:BlackjackPlayer) {
+    func dealTo(player: BlackjackPlayer) {
         if let card = deck.cards.popLast(),
             var faceUp = deck.cards.popLast()
         {
@@ -178,40 +178,41 @@ class Dealer: BlackjackPlayer {
         }
     }
     
-    override func playTurn(dealer: Dealer) {
+    func playTurn(player: BlackjackPlayer) {
         // the blackjack dealer always has to hit if hand is < 17 pts, else stand
     }
     
-    override func hit(player:BlackjackPlayer) {
+    func hit(player: BlackjackPlayer) {
         if var card = deck.cards.popLast() {
             card.isFaceDown = false
             player.hand.append(card)
         }
     }
     
-    override func stand(dealer: BlackjackPlayer) {
+    func stand(player: BlackjackPlayer) {
         // tell next player to playTurn
     }
 }
 
-/*
 
+/*
+ 
 // Uncomment when ready.
 
 let dealer = Dealer()
 let p = BlackjackPlayer()
 
-p.stand(dealer)
-p.hit(dealer)
+p.stand(dealer: dealer)
+p.hit(dealer: dealer)
 
 let player1 = BlackjackPlayer()
 let player2 = BlackjackPlayer()
 
-dealer.dealTo(player1)
-dealer.dealTo(player2)
+dealer.dealTo(player: player1)
+dealer.dealTo(player: player2)
 
-player1.playTurn(dealer)
-player2.playTurn(dealer)
-dealer.playTurn(dealer)
+player1.playTurn(dealer: dealer)
+player2.playTurn(dealer: dealer)
+dealer.playTurn(dealer: dealer)
 
 */

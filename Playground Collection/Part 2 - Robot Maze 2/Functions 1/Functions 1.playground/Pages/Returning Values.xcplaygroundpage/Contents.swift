@@ -2,7 +2,7 @@
 /*:
 ## Returning Values
 */
-func calculateTip(priceOfMeal: Double) -> Double {
+func calculateTip(_ priceOfMeal: Double) -> Double {
     return priceOfMeal * 0.15
 }
 

@@ -6,7 +6,7 @@
 import Foundation
 
 // Defining our own custom error type.
-enum MyError: ErrorType {
+enum MyError: ErrorProtocol {
     case ItDidNotWork
 }
 

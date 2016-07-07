@@ -8,11 +8,11 @@ Write two versions of a function called overloadingFun. One version accepts a si
 Hint: See the example function calls to determine how to implement each function.
 
 */
-func overloadingFun(s1: String) /* define return type */ {
+func overloadingFun(_ s1: String) /* define return type */ {
 
 }
 
-func overloadingFun(num: Int) /* define return type */ {
+func overloadingFun(_ num: Int) /* define return type */ {
 
 }
 
@@ -82,9 +82,9 @@ Rewrite the nested function `innerFunction` such that the example function calls
 
 Hint: The `outerFunction` implements [Exclusive OR](https://en.wikipedia.org/wiki/Exclusive_or) (XOR) which is a logical operator that returns true when there is an odd number of inputs that are true.
 */
-func outerFunction(input1 input1: Bool, input2: Bool) -> Bool {
+func outerFunction(input1: Bool, input2: Bool) -> Bool {
     
-    func innerFunction(a a: Bool, b: Bool) -> Bool {
+    func innerFunction(a: Bool, b: Bool) -> Bool {
         return false
         /* rewrite this function */
     }

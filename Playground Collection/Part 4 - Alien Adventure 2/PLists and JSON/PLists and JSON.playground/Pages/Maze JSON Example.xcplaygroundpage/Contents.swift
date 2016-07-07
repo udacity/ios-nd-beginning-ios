@@ -5,14 +5,14 @@
 */
 import UIKit
 
-let mazeJSONURL = NSBundle.mainBundle().URLForResource("Maze1", withExtension: "json")!
-let rawMazeJSON = NSData(contentsOfURL: mazeJSONURL)!
+let mazeJSONURL = Bundle.main().urlForResource("Maze1", withExtension: "json")!
+let rawMazeJSON = try! Data(contentsOf: mazeJSONURL)
 
 var mazeDictionaryFromJSON: NSDictionary!
 do {
-    mazeDictionaryFromJSON = try! NSJSONSerialization.JSONObjectWithData(rawMazeJSON, options: NSJSONReadingOptions()) as! NSDictionary
+    mazeDictionaryFromJSON = try! JSONSerialization.jsonObject(with: rawMazeJSON, options: JSONSerialization.ReadingOptions()) as! NSDictionary
 }
 
 if let mazeDictionaryFromJSON = mazeDictionaryFromJSON {
-    visualizeMaze(mazeDictionaryFromJSON)
+    visualizeMaze(mazeDictionary: mazeDictionaryFromJSON)
 }

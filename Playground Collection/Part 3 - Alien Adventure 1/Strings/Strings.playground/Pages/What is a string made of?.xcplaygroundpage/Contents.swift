@@ -24,7 +24,7 @@ theTruth.characters.count
 
 // Reverse the characters in a string 
 var forwardString = "spoons"
-var charactersReversed = forwardString.characters.reverse()
+var charactersReversed = forwardString.characters.reversed()
 var backwardsString = String(charactersReversed)
 
 //: Unicode scalars are the backbone of Swift strings. As a result, we can incorporate any unicode character directly into a string, including emojis!

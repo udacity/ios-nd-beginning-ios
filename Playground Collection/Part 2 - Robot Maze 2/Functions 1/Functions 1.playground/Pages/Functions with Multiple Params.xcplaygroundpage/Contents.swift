@@ -14,7 +14,7 @@ var jessica = Student(name: "Jessica", age: 21, school: "University of Wisconsin
 var jarrod = Student(name: "Jarrod", age: 19, school: "University of Alabama-Huntsville")
 
 //: Defining and using a function with multiple parameters.
-func greetStudent(student: Student, lateForClass: Bool) {
+func greetStudent(_ student: Student, lateForClass: Bool) {
     if lateForClass {
         print("\(student.name)... you're late 😠!")
     } else {

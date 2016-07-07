@@ -9,26 +9,26 @@ import Foundation
 struct SuitedCard {
     
     enum Suit {
-        case Hearts
-        case Spades
-        case Diamonds
-        case Clubs
+        case hearts
+        case spades
+        case diamonds
+        case clubs
     }
     
     enum Value {
-        case Two
-        case Three
-        case Four
-        case Five
-        case Six
-        case Seven
-        case Eight
-        case Nine
-        case Ten
-        case Jack
-        case Queen
-        case King
-        case Ace
+        case two
+        case three
+        case four
+        case five
+        case six
+        case seven
+        case eight
+        case nine
+        case ten
+        case jack
+        case queen
+        case king
+        case ace
     }
     
     let suit: Suit
@@ -52,13 +52,13 @@ struct SuitedCard {
     // the suitDisplay is a value that can be derived from information already in the struct (the suit)
     var suitDisplay: String {
         switch self.suit {
-        case .Hearts:
+        case .hearts:
             return "♥"
-        case .Spades:
+        case .spades:
             return "♠"
-        case .Diamonds:
+        case .diamonds:
             return "♦"
-        case .Clubs:
+        case .clubs:
             return "♣"
         }
     }
@@ -66,15 +66,15 @@ struct SuitedCard {
     // isBlackjack is a method belonging to SuitedCard that allows us to check if a SuitedCard plus another card (otherCard) produces the conditions necessary for "Blackjack"
     func isBlackjack(otherCard: SuitedCard) -> Bool {
         switch value {
-        case .King, .Queen, .Jack, .Ten:
-            return otherCard.value == .Ace
+        case .king, .queen, .jack, .ten:
+            return otherCard.value == .ace
         default:
             break
         }
         
         switch otherCard.value {
-        case .King, .Queen, .Jack, .Ten:
-            return value == .Ace
+        case .king, .queen, .jack, .ten:
+            return value == .ace
         default:
             break
         }
@@ -84,19 +84,19 @@ struct SuitedCard {
 }
 
 //: Example use of `SuitedCard`'s computed property `suitDisplay`.
-let s = SuitedCard(suit: .Hearts, value: .Ace)
+let s = SuitedCard(suit: .hearts, value: .ace)
 s.suitDisplay
 
 //: Example use of `SuitedCard`'s `isBlackjack` method.
-let t = SuitedCard(suit: .Spades, value: .Ten)
-let u = SuitedCard(suit: .Spades, value: .Ten, isFaceDown:true)
-s.isBlackjack(t)
+let t = SuitedCard(suit: .spades, value: .ten)
+let u = SuitedCard(suit: .spades, value: .ten, isFaceDown:true)
+s.isBlackjack(otherCard: t)
 
 //: Example use of `SuitedCard`'s custom initializers.
-let ten = SuitedCard(suit: .Spades, value: .Ten)
+let ten = SuitedCard(suit: .spades, value: .ten)
 ten.isFaceDown
 
-let upsideDown = SuitedCard(suit: .Spades, value: .Ten, isFaceDown: true)
+let upsideDown = SuitedCard(suit: .spades, value: .ten, isFaceDown: true)
 upsideDown.isFaceDown
 
 //: [Next](@next)

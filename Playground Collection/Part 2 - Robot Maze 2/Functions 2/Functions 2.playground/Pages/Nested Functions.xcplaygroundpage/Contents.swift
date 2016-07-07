@@ -2,7 +2,7 @@
 /*:
 ## Nested Functuions
 */
-func approximateEarnings(hours hours: Double, wage: Double, roundUp: Bool) -> Int {
+func approximateEarnings(_ hours: Double, wage: Double, roundUp: Bool) -> Int {
     
     // nested function (a function within a function)
     func round(value: Double, roundUp: Bool) -> Int {

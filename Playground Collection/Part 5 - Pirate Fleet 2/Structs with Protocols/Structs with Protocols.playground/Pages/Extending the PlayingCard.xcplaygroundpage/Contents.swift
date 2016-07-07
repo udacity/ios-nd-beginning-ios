@@ -38,27 +38,27 @@ struct PreciousCard: GoldPlatedPlayingCard {
         }
         
         switch suit {
-        case .RoseGold:
+        case .roseGold:
             return "A gold-plated 🌹"
-        case .SpaceGrey:
+        case .spaceGrey:
             return "A gold-plated 🚀"
-        case .Champagne:
+        case .champagne:
             return "A gold-plated 🍷"
-        case .Diamond:
+        case .diamond:
             return "A gold-plated 💍"
         }
     }
     
     enum Suit {
-        case RoseGold
-        case SpaceGrey
-        case Champagne
-        case Diamond
+        case roseGold
+        case spaceGrey
+        case champagne
+        case diamond
     }
     
     let suit: Suit
 }
 
-let myPrecious = PreciousCard(karats: 24, isFaceDown: false, suit: .RoseGold)
+let myPrecious = PreciousCard(karats: 24, isFaceDown: false, suit: .roseGold)
 
 //: [Next](@next)

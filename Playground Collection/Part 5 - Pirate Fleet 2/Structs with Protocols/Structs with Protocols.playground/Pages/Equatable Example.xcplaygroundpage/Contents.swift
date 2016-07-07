@@ -18,8 +18,8 @@ protocol PlayingCard {
 struct Joker: PlayingCard, Equatable {
     
     enum Color {
-        case Red
-        case Black
+        case red
+        case black
     }
     
     let color: Color
@@ -32,9 +32,9 @@ struct Joker: PlayingCard, Equatable {
         }
         
         switch color {
-        case .Red:
+        case .red:
             return "R 🃏"
-        case .Black:
+        case .black:
             return "B 🃏"
         }
     }
@@ -45,8 +45,8 @@ func ==(lhs: Joker, rhs: Joker) -> Bool {
     return true
 }
 
-var redJoker = Joker(color: .Red, isFaceDown: false)
-var blackJoker = Joker(color: .Black, isFaceDown: false)
+var redJoker = Joker(color: .red, isFaceDown: false)
+var blackJoker = Joker(color: .black, isFaceDown: false)
 
 blackJoker == redJoker
 blackJoker != redJoker

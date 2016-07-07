@@ -20,7 +20,7 @@ print(presidentialPetsDict)
 //: Remove the entry for "George Bush" and replace it with an entry for "George W. Bush". Use the same value for both keys.
 
 // Solution
-var oldValue = presidentialPetsDict.removeValueForKey("George Bush")
+var oldValue = presidentialPetsDict.removeValue(forKey: "George Bush")
 presidentialPetsDict["George W. Bush"] = oldValue
 //: ### Exercise 4
 //: We've initialized a new dictionary of presidentialDogs with the entries from presidentialPets. Update the entry for Bill Clinton by replacing "Socks" the cat with "Buddy" the dog. Print out the presidentialDogs dictionary to test your solution.

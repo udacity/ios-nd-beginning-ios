@@ -2,20 +2,20 @@
 
 //: ## Enums and Switch statements go hand in hand
 enum CaliforniaPark {
-    case Yosemite, DeathValley, Lasson, Sequoia
+    case yosemite, deathValley, lasson, sequoia
 }
 
 var warning = ""
-var destination = CaliforniaPark.Yosemite
+var destination = CaliforniaPark.yosemite
 
 switch destination {
-case .Yosemite:
+case .yosemite:
     warning = "Beware of aggressive bears!"
-case .DeathValley:
+case .deathValley:
     warning = "Beware of dehydration!"
-case .Lasson:
+case .lasson:
     warning = "Watch out for boiling pools!"
-case .Sequoia:
+case .sequoia:
     warning = "Watch out for falling trees!"
 }
 //: [Next](@next)
