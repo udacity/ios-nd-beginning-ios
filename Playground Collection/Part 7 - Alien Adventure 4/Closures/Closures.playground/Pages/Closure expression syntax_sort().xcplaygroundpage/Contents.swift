@@ -3,7 +3,7 @@ import Foundation
 //: ## Closure expression syntax: sort()
 
 var bids = [48, 75, 63, 52, 6]
-var orderedBids = bids.sort(isOrderedBefore: {(bid1: Int, bid2: Int) -> Bool in
+var orderedBids = bids.sorted(by: {(bid1: Int, bid2: Int) -> Bool in
     return  bid2 > bid1
 })
 
@@ -17,7 +17,7 @@ print(orderedBids, terminator: "")
 //:}
 
 var birthYears: [Int] = [2004, 2011, 2007, 2005, 2002]
-var reverseChronologicalYears = birthYears.sorted(isOrderedBefore: { (year1: Int, year2: Int) -> Bool in
+var reverseChronologicalYears = birthYears.sorted(by: { (year1: Int, year2: Int) -> Bool in
     return year1 > year2
 })
 

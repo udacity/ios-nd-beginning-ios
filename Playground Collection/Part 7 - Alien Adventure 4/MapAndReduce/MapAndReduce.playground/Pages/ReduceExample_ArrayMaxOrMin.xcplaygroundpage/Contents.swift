@@ -6,12 +6,12 @@ import Foundation
 
 // Find the maximum number in an array
 let numbers = [7, 89, 48, 20, 38, 89, 29]
-let highestNumber = numbers.reduce(0, combine:{(currentMax, number) -> Int in
+let highestNumber = numbers.reduce(0, {(currentMax, number) -> Int in
     return max(currentMax, number)
 })
 
 // Written in shorthand
-let maxNumber = numbers.reduce(0, combine:{
+let maxNumber = numbers.reduce(0, {
     max($0, $1)
 })
 
@@ -22,14 +22,14 @@ let maximum = numbers.reduce(0) {
 
 // Find the minimum of an array of words
 let words = ["zombify", "zip","zoology", "zest","zone", "zebra"]
-let firstAlphabeticalWord = words.reduce("zzz", combine: {(currentMin, word) -> String in
+let firstAlphabeticalWord = words.reduce("zzz", {(currentMin, word) -> String in
     min(currentMin, word)
 })
 
 print(firstAlphabeticalWord)
 
 // Alphabetical minimum in shorthand
-let alphabeticalMin = words.reduce("zzz", combine: {
+let alphabeticalMin = words.reduce("zzz", {
     min($0,$1)
 })
 

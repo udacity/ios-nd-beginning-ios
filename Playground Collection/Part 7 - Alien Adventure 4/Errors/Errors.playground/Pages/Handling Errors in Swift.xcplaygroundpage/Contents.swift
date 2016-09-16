@@ -3,7 +3,7 @@
 */
 
 // Defining our own custom error type.
-enum MyError: ErrorProtocol {
+enum MyError: Error {
     case ItDidNotWork
 }
 

@@ -20,7 +20,7 @@ struct GuitarString {
     var broken: Bool = false
     var outOfTune: Bool = false
     
-    enum Error: ErrorProtocol {
+    enum GuitarError: Error {
         case Broken
         case OutOfTune
     }
@@ -28,12 +28,12 @@ struct GuitarString {
     mutating func pluck(velocity: Float) throws -> String {
         if broken {
             // can't play a broken string
-            throw GuitarString.Error.Broken
+            throw GuitarString.GuitarError.Broken
         }
         
         if outOfTune {
             // you can still play an out of tune string, this is just to illustrate another error type
-            throw GuitarString.Error.OutOfTune
+            throw GuitarString.GuitarError.OutOfTune
         }
         
         // We're playing the string really hard.
@@ -46,7 +46,7 @@ struct GuitarString {
             if arc4random() % 100 == 0 {
                 // We broke the string! This sounds bad when it happens, so throw an error right away.
                 broken = true
-                throw GuitarString.Error.Broken
+                throw GuitarString.GuitarError.Broken
             }
         }
         
@@ -96,9 +96,9 @@ class Guitarist {
         for note in notes {
             do {
                 try guitar.playNote(note: note)
-            } catch GuitarString.Error.Broken {
+            } catch GuitarString.GuitarError.Broken {
                 // quick, replace the string!
-            } catch GuitarString.Error.OutOfTune {
+            } catch GuitarString.GuitarError.OutOfTune {
                 // tune that string...
             } catch {
                 // something else went wrong...time to crowd surf

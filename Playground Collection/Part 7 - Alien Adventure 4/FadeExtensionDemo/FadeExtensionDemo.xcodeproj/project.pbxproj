@@ -60,8 +60,8 @@
 				ED649CCA1B3DE8F300D60298 /* UIViewExtensions.swift */,
 				ED649CAC1B3DD6C000D60298 /* ViewController.swift */,
 				ED649CAE1B3DD6C000D60298 /* Main.storyboard */,
-				ED649CB11B3DD6C000D60298 /* Images.xcassets */,
 				ED649CB31B3DD6C000D60298 /* LaunchScreen.xib */,
+				ED649CB11B3DD6C000D60298 /* Images.xcassets */,
 				ED649CA81B3DD6C000D60298 /* Supporting Files */,
 			);
 			path = FadeExtensionDemo;

@@ -8,14 +8,14 @@ let tripContributions = ["Andy": 25, "Kathleen": 50, "Janhavi": 45, "Sebastian":
 let tripContributionsArray = Array(tripContributions.values)
 print(tripContributionsArray)
 
-let totalTripCost = tripContributionsArray.reduce(0, combine: {(subtotal, contribution) -> Int in
+let totalTripCost = tripContributionsArray.reduce(0, {(subtotal, contribution) -> Int in
     subtotal + contribution
 })
 
 let averageTripCost = totalTripCost/tripContributions.count
 
 // Again in shorthand
-let tripCost = tripContributionsArray.reduce(0, combine: {
+let tripCost = tripContributionsArray.reduce(0, {
     $0 + $1
 })
 
