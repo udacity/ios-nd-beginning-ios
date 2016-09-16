@@ -178,7 +178,7 @@ class BlackjackPlayer {
     // Note that this solution uses the filter method, which takes a closure as an argument.
     // We will cover closures and the filter method in the next part of the course!
     // Your solution may look similar to the definition of lowTotal above.
-    private var highTotal: Int {
+    internal var highTotal: Int {
         let aces = hand.filter { $0.value == .ace}
         return lowTotal + (aces.count * 10)
     }
