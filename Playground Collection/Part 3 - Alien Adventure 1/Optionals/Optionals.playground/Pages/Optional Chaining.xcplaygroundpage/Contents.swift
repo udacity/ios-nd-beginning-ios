@@ -9,7 +9,7 @@ var anotherImageView = UIImageView()
 anotherImageView.image = UIImage(named:"puppy_in_box")
 
 var size = anotherImageView.image?.size
-size.dynamicType
+type(of: size)
 
 if let imageSize = anotherImageView.image?.size {
     print("Here's the image size: \(imageSize)")

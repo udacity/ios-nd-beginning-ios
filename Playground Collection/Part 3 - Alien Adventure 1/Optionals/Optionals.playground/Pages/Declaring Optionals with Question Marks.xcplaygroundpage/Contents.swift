@@ -8,7 +8,7 @@ import UIKit
 var z: Int
 var string: String
 string = "123"
-//z = Int(string)
+//z = Int(string)!
 //z * 2
 
 // Example 2

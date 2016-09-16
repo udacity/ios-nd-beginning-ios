@@ -5,7 +5,7 @@ import Foundation
 //: ### Optionals can be passed as parameters to functions
 
 // Example: Picking up groceries in an optional car
-func pickUpGroceries(car:Car?) {
+func pickUpGroceries(car: Car?) {
     if let car = car {
         print("We'll pick up the groceries in the \(car.model)")
     } else {

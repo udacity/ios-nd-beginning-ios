@@ -8,7 +8,7 @@ var x: Int
 
 // Object references can't store nil values either
 var c: AnyObject
-c = UIColor.red()
+c = UIColor.red
 //c = nil
 
 //: ### Cool! Except, sometimes we need nil values.
