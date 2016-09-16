@@ -6,6 +6,8 @@
 //  Copyright © 2015 Udacity. All rights reserved.
 //
 
+// MARK: - CounterModel
+
 /// Used to count up or down.
 struct CounterModel {
     /// Only this struct can adjust the value

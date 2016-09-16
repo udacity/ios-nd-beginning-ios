@@ -56,11 +56,11 @@
 		A094C1341B97FEA80067F493 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
-				A9C252AD1D1C0F5000156FA7 /* LaunchScreen.xib */,
 				A094C1351B97FEA80067F493 /* AppDelegate.swift */,
-				A94987581C06237F00285FB7 /* CounterModel.swift */,
 				A094C1371B97FEA80067F493 /* ViewController.swift */,
+				A94987581C06237F00285FB7 /* CounterModel.swift */,
 				A094C1391B97FEA80067F493 /* Main.storyboard */,
+				A9C252AD1D1C0F5000156FA7 /* LaunchScreen.xib */,
 				A094C13C1B97FEA80067F493 /* Assets.xcassets */,
 				A094C1411B97FEA80067F493 /* Info.plist */,
 			);

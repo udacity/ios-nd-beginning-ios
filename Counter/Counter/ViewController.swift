@@ -8,15 +8,21 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController
+
 class ViewController: UIViewController {
 
+    // MARK: Properties
+    
+    var counterModel: CounterModel = CounterModel()
+    
+    // MARK: Outlets
+    
     @IBOutlet weak var increment: UIButton!
     @IBOutlet weak var decrement: UIButton!
     @IBOutlet weak var counterValue: UILabel!
     
-    var counterModel: CounterModel = CounterModel()
-    
-    // MARK - Controller functions
+    // MARK: Controller Functions
     
     @IBAction func didIncrement(_ sender: AnyObject) {
         counterModel.increment()
