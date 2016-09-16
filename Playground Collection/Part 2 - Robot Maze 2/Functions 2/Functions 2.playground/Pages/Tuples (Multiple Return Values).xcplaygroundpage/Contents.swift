@@ -22,7 +22,7 @@ func averageAndSlugging(stats: BaseballHittingStats) -> (Double, Double) {
 }
 
 //: To reference a value in a tuple, use the dot operator followed by the position of the value within the tuple.
-let averageAndSluggingTuple = averageAndSlugging(miguelCabrera)
+let averageAndSluggingTuple = averageAndSlugging(stats: miguelCabrera)
 averageAndSluggingTuple.0   // batting average
 averageAndSluggingTuple.1   // slugging percentage
 

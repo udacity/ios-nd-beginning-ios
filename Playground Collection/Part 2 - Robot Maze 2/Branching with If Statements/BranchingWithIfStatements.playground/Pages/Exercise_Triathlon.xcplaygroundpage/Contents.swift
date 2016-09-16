@@ -28,5 +28,5 @@ func checkTrainingStatus (triathleteInTraining: Trainee) {
     //TODO: Add your if, else-if statement here!
 }
 
-checkTrainingStatus(athlete1)
+checkTrainingStatus(triathleteInTraining: athlete1)
 

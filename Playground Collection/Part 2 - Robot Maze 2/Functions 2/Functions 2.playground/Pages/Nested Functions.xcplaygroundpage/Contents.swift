@@ -13,7 +13,7 @@ func approximateEarnings(_ hours: Double, wage: Double, roundUp: Bool) -> Int {
         }
     }
     
-    return round(hours, roundUp: roundUp) * round(wage, roundUp: roundUp)
+    return round(value: hours, roundUp: roundUp) * round(value: wage, roundUp: roundUp)
 }
 
 // Because the function "round" is defined within "approximateEarnings", we cannot use it here because it is out of scope.
