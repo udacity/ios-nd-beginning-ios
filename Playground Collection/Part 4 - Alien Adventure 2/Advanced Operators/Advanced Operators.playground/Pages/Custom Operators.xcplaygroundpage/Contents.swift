@@ -5,7 +5,7 @@
 import Foundation
 
 //: The ❗️ (prefix) operator modifies a string by prefixing "dis" in front of it.
-prefix operator ❗️ {}   
+prefix operator ❗️   
 prefix func ❗️ (word: String) -> String {
     return "dis" + word
 }
@@ -15,7 +15,7 @@ prefix func ❗️ (word: String) -> String {
 ❗️"appear"
 
 //: The ⊡ (infix) operator performs exponentation of two integers.
-infix operator ⊡ { associativity left precedence 155 }
+infix operator ⊡: MultiplicationPrecedence
 func ⊡ (base: Int, power: Int) -> Int {
     return Int(pow(Double(base), Double(power)))
 }
@@ -24,7 +24,7 @@ func ⊡ (base: Int, power: Int) -> Int {
 5 ⊡ 2 ⊡ 2
 
 //: The ♣︎ (infix) operator takes two integers that create an inclusive range. Then it returns a random value from that range.
-infix operator ♣︎ { associativity left precedence 155 }
+infix operator ♣︎: AdditionPrecedence
 func ♣︎ (from: Int, to: Int) -> Int {
     var range: UInt32 = 0
     if(from > to) {
@@ -46,7 +46,7 @@ func ♣︎ (from: Int, to: Int) -> Int {
 1 ♣︎ 3
 
 //: The % (postfix) operator takes an integer and returns a percentage value for it (ex. 5% returns 0.05)
-postfix operator % {}
+postfix operator %
 postfix func % (percent: Int) -> Double {
     return (Double(percent) / 100)
 }

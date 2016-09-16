@@ -5,7 +5,7 @@
 */
 import UIKit
 
-let mazeJSONURL = Bundle.main().urlForResource("Maze1", withExtension: "json")!
+let mazeJSONURL = Bundle.main.url(forResource: "Maze1", withExtension: "json")!
 let rawMazeJSON = try! Data(contentsOf: mazeJSONURL)
 
 var mazeDictionaryFromJSON: NSDictionary!

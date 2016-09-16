@@ -97,7 +97,7 @@ func makeMidSection(cellData: [Bool], isStar: Bool) -> String {
 }
 
 //: Load the contents of Maze1.plist into an `NSDictionary` and visualize the maze!
-let mazePListURL = Bundle.main().urlForResource("Maze1", withExtension: "plist")!
+let mazePListURL = Bundle.main.url(forResource: "Maze1", withExtension: "plist")!
 let mazeDictionaryFromPList = NSDictionary(contentsOf: mazePListURL)
 
 if let mazeDictionaryFromPList = mazeDictionaryFromPList {
