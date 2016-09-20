@@ -27,6 +27,14 @@ var forwardString = "spoons"
 var charactersReversed = forwardString.characters.reversed()
 var backwardsString = String(charactersReversed)
 
+// theTruth[3]
+// theTruth.characters[3]
+
+//: Unicode scalar example
+var nWithTilde = "\u{006E}\u{0303}"
+nWithTilde.unicodeScalars.count
+nWithTilde.characters.count
+
 //: Unicode scalars are the backbone of Swift strings. As a result, we can incorporate any unicode character directly into a string, including emojis!
 let similarTruth = "💰can't buy me 💖"
 
