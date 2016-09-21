@@ -95,7 +95,6 @@ s.isBlackjack(otherCard: t)
 //: Example use of `SuitedCard`'s custom initializers.
 let ten = SuitedCard(suit: .spades, value: .ten)
 ten.isFaceDown
-
 let upsideDown = SuitedCard(suit: .spades, value: .ten, isFaceDown: true)
 upsideDown.isFaceDown
 

@@ -3,25 +3,25 @@
 ## Beaker Example Access Modifiers and Exercises
 */
 //: ### Beaker Struct
-struct Beaker {
+public struct Beaker {
     
-    let volumeMilliliters: Double
+    public let volumeMilliliters: Double
     
     // The contents are pairs of (description, millileters). This is made private so that only the Beaker can modify the contents directly.
     private var contents: [String:Double] = [:]
     
-    init(volumeMilliliters: Double) {
+    public init(volumeMilliliters: Double) {
         self.volumeMilliliters = volumeMilliliters
     }
     
     // These are US ounces
-    var volumeOunces: Double {
+    private var volumeOunces: Double {
         get {
             return volumeMilliliters * 0.033814
         }
     }
     
-    var contentsVolume: Double {
+    private var contentsVolume: Double {
         var volumeSum = 0.0
         for value in contents.values {
             volumeSum += value
@@ -29,12 +29,12 @@ struct Beaker {
         return volumeSum
     }
     
-    var availableMilliliters: Double {
+    private var availableMilliliters: Double {
         return volumeMilliliters - contentsVolume
     }
     
     // Adds contents to the beaker without overflowing the beaker's volume.
-    mutating func addContents(_ name: String, amount: Double) {
+    public mutating func addContents(_ name: String, amount: Double) {
         let amountWithoutOverflowing = min(availableMilliliters, amount)
         if let existingAmount = contents[name] {
             contents[name] = existingAmount + amountWithoutOverflowing
@@ -43,12 +43,12 @@ struct Beaker {
         }
     }
     
-    func listContents() -> String {
+    public func listContents() -> String {
         return contents.description
     }
     
     // TODO: re-implement this, keeping in mind contents
-    func canContainContents(otherBeaker:Beaker) -> Bool {
+    func canContainContents(otherBeaker: Beaker) -> Bool {
         return false
     }
 }
