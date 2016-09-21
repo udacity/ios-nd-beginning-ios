@@ -11,12 +11,12 @@ struct Student {
 //: This code creates an array of dictionaries from a file called Students.plist that is bundled with this playground.
 import Foundation
 let studentPList = Bundle.main.url(forResource: "Students", withExtension: "plist")!
-let studentArray = NSArray(contentsOf: studentPList)!
+let studentArray = NSArray(contentsOf: studentPList) as! [[String:Any]]
 //: This code uses the array of dictionaries (studentArray) to create an array of Student structs called studentStructs.
 var studentStructs = [Student]()
 
 // must cast the values into most appropriate type
-for student in (studentArray as? [[String:Any]])! {
+for student in studentArray {
     if let name = student["name"] as? String, let age = student["age"] as? Int, let school = student["school"] as? String {
         studentStructs.append(Student(name: name, age: age, school: school))
     }
