@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FirstString</key>
+	<string>udacity</string>
+	<key>SecondString</key>
+	<string>courses</string>
+	<key>ThirdString</key>
+	<string>are</string>
+	<key>FourthString</key>
+	<string>fun</string>
+</dict>
+</plist>
