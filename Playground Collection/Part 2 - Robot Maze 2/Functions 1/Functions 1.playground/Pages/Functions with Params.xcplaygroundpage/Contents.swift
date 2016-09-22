@@ -14,11 +14,11 @@ var jessica = Student(name: "Jessica", age: 21, school: "University of Wisconsin
 var jarrod = Student(name: "Jarrod", age: 19, school: "University of Alabama-Huntsville")
 
 //: Defining and using a function with parameters.
-func sayHelloToStudent(_ student: Student) {
+func sayHelloToStudent(student: Student) {
     print("Hello, \(student.name)!")
 }
 
-sayHelloToStudent(gabrielle)
-sayHelloToStudent(jessica)
-sayHelloToStudent(jarrod)
+sayHelloToStudent(student: gabrielle)
+sayHelloToStudent(student: jessica)
+sayHelloToStudent(student: jarrod)
 //: [Next](@next)
