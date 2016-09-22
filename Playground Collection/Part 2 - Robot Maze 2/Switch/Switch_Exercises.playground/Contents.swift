@@ -7,21 +7,17 @@
 
 // Below is an if, else-if statement which determines what team to cheer for  conditioning on the sport being played. Notice that the statement handles multiple cases of one condition. Rewrite the if, else if statement as a switch statement instead.
 
-enum Sport {
-    case Baseball, Basketball, AmericanFootball, Hockey, Soccer
-}
+var sport = "Baseball"
 
-var sport = Sport.Baseball
-
-if sport == .Baseball {
+if sport == "Baseball" {
     print("Go A's!")
-} else if sport == .Basketball {
+} else if sport == "Basketball" {
     print("Go Warriors!")
-} else if sport == .AmericanFootball {
+} else if sport == "AmericanFootball" {
     print( "Go Raiders!")
-} else if sport == .Hockey {
+} else if sport == "Hockey" {
     print("Go Sharks!")
-} else if sport == .Soccer {
+} else if sport == "Soccer" {
     print("Go Earthquakes!")
 } else {
     print("Go Team!")
