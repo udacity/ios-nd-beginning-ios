@@ -19,11 +19,11 @@ var jarrod = Clubgoer(name: "Jarrod", age: 42, onGuestList: true, knowsTheOwner:
 
 
 // Helper functions for admitting or denying entrance
-func admit(_ person: Clubgoer) {
+func admit(person: Clubgoer) {
     print("\(person.name), come and party with us!")
 }
 
-func deny(_ person: Clubgoer) {
+func deny(person: Clubgoer) {
     print("Sorry, \(person.name), maybe you can go play Bingo with the Android team.")
 }
 
@@ -36,28 +36,28 @@ func sendToOwner(person: Clubgoer) {
 }
 
 // Functions to determine which clubgoers should be admitted
-func screen(_ person: Clubgoer) {
+func screen(person: Clubgoer) {
     if person.onGuestList {
-        admit(person)
+        admit(person: person)
     }
     
     if !person.onGuestList {
-        deny(person)
+        deny(person: person)
     }
 }
 
-func screenUnder21(_ person: Clubgoer) {
+func screenUnder21(person: Clubgoer) {
     if person.onGuestList && person.age >= 21 {
-        admit(person)
+        admit(person: person)
     } else {
-        deny(person)
+        deny(person: person)
     }
 }
 
-func screenVIP(_ person: Clubgoer) {
+func screenVIP(person: Clubgoer) {
     // TODO: Add your if, else-if statement here!
 }
 
-screenVIP(ayush)
+screenVIP(person: ayush)
 
 //: [Next](@next)
