@@ -7,18 +7,18 @@ import Foundation
 
 // Defining our own custom error type.
 enum MyError: Error {
-    case ItDidNotWork
+    case itDidNotWork
 }
 
 // This method throws an error.
 func methodThatThrows() throws {
     print("After this line, we will throw an error")
-    throw MyError.ItDidNotWork
+    throw MyError.itDidNotWork
 }
 
 // This method returns a result (and can throw an error).
 func methodThatThrowsWithResult() throws -> String {
-    // throw MyError.ItDidNotWork
+    // throw MyError.itDidNotWork
     return "Will never get here"
 }
 
