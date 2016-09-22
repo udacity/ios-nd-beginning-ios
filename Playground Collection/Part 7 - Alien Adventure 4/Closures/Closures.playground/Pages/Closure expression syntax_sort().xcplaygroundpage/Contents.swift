@@ -4,7 +4,7 @@ import Foundation
 
 var bids = [48, 75, 63, 52, 68]
 var orderedBids = bids.sorted(by: {(bid1: Int, bid2: Int) -> Bool in
-    return  bid2 > bid1
+    return bid2 > bid1
 })
 
 print(orderedBids, terminator: "")
