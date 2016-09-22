@@ -26,4 +26,4 @@ let optionalValue = try? methodThatThrowsWithResult()
 optionalValue == nil
 
 // THIS LINE WILL CRASH!
-// try! "this will crach".writeToURL(NSURL(), atomically: false, encoding: 0)
+// try! "this will crash".write(to: URL(string: "")!, atomically: false, encoding: .utf8)
