@@ -19,4 +19,4 @@ func approximateEarnings(hours: Double, wage: Double, roundUp: Bool) -> Int {
 approximateEarnings(hours: 23.35, wage: 5.75, roundUp: true)
 
 // Because the function "round" is defined within "approximateEarnings", we cannot use it here because it is out of scope.
-round(value: 22.34, roundUp: true)
+// round(value: 22.34, roundUp: true)

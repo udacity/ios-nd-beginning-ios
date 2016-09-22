@@ -8,27 +8,27 @@ Write two versions of a function called overloadingFun. One version accepts a si
 Hint: See the example function calls to determine how to implement each function.
 
 */
-func overloadingFun(_ s1: String) -> String {
+func overloadingFun(s1: String) -> String {
     return "I'm a String with the value: " + s1
 }
 
-func overloadingFun(_ num: Int) -> String {
+func overloadingFun(num: Int) -> String {
     return "I'm an Int with the value: " + String(num)
 }
 
 /* Example Function Call
 
-overloadingFun("softball") // "I'm a String with the value: softball"
-overloadingFun(12) // "I'm an Int with the value: 12"
-overloadingFun(591) // "I'm an Int with the value: 591"
-overloadingFun("") // "I'm a String with the value: "
+overloadingFun(s1: "softball") // "I'm a String with the value: softball"
+overloadingFun(num: 12) // "I'm an Int with the value: 12"
+overloadingFun(num: 591) // "I'm an Int with the value: 591"
+overloadingFun(s1: "") // "I'm a String with the value: "
 
 */
 
-overloadingFun("softball")
-overloadingFun(12)
-overloadingFun(591)
-overloadingFun("")
+overloadingFun(s1: "softball")
+overloadingFun(num: 12)
+overloadingFun(num: 591)
+overloadingFun(s1: "")
 
 //: ### Exercise 2
 //: Write a function `medianAndAverage` that takes three `Int` parameters and returns a tuple with the type `(Int, Double)` where the first value is the median of the input values and the second value is the average of the input values.
@@ -95,7 +95,7 @@ struct StudentRecord {
     var pointsPossible: Int
 }
 
-func updateStudentRecordInOut(_ record: inout StudentRecord, pointsEarned: Int, pointsPossible: Int) {
+func updateStudentRecordInOut(record: inout StudentRecord, pointsEarned: Int, pointsPossible: Int) {
     record.pointsEarned += pointsEarned
     record.pointsPossible += pointsPossible
 }
@@ -104,21 +104,21 @@ var record2 = StudentRecord(id: 2, name: "Jarrod", pointsEarned: 27, pointsPossi
 
 /* Example Function Call
 
-updateStudentRecordInOut(&record2, pointsEarned: 4, pointsPossible: 8)
+updateStudentRecordInOut(record: &record2, pointsEarned: 4, pointsPossible: 8)
 record2.pointsEarned // 31
 record2.pointsPossible // 38
 
-updateStudentRecordInOut(&record2, pointsEarned: 8, pointsPossible: 9)
+updateStudentRecordInOut(record: &record2, pointsEarned: 8, pointsPossible: 9)
 record2.pointsEarned // 39
 record2.pointsPossible // 47
 
 */
 
-updateStudentRecordInOut(&record2, pointsEarned: 4, pointsPossible: 8)
+updateStudentRecordInOut(record: &record2, pointsEarned: 4, pointsPossible: 8)
 record2.pointsEarned
 record2.pointsPossible
 
-updateStudentRecordInOut(&record2, pointsEarned: 8, pointsPossible: 9)
+updateStudentRecordInOut(record: &record2, pointsEarned: 8, pointsPossible: 9)
 record2.pointsEarned
 record2.pointsPossible
 

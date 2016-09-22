@@ -8,20 +8,20 @@ Write two versions of a function called overloadingFun. One version accepts a si
 Hint: See the example function calls to determine how to implement each function.
 
 */
-func overloadingFun(_ s1: String) /* define return type */ {
+func overloadingFun(s1: String) /* define return type */ {
 
 }
 
-func overloadingFun(_ num: Int) /* define return type */ {
+func overloadingFun(num: Int) /* define return type */ {
 
 }
 
 /* Example Function Call
 
-overloadingFun("softball") // "I'm a String with the value: softball"
-overloadingFun(12) // "I'm an Int with the value: 12"
-overloadingFun(591) // "I'm an Int with the value: 591"
-overloadingFun("") // "I'm a String with the value: "
+overloadingFun(s1: "softball") // "I'm a String with the value: softball"
+overloadingFun(num: 12) // "I'm an Int with the value: 12"
+overloadingFun(num: 591) // "I'm an Int with the value: 591"
+overloadingFun(s1: "") // "I'm a String with the value: "
 
 */
 
@@ -65,11 +65,11 @@ var record2 = StudentRecord(id: 2, name: "Jarrod", pointsEarned: 27, pointsPossi
 
 /* Example Function Call
 
-updateStudentRecordInOut(&record2, pointsEarned: 4, pointsPossible: 8)
+updateStudentRecordInOut(record: &record2, pointsEarned: 4, pointsPossible: 8)
 record2.pointsEarned // 31
 record2.pointsPossible // 38
-
-updateStudentRecordInOut(&record2, pointsEarned: 8, pointsPossible: 9)
+ 
+updateStudentRecordInOut(record: &record2, pointsEarned: 8, pointsPossible: 9)
 record2.pointsEarned // 39
 record2.pointsPossible // 47
 
