@@ -75,15 +75,14 @@ The function `beginsWithVowel` should take a single `String` parameter and retur
 
 First, you will want to test if the input string is "". If the input string is "", then return false. Otherwise, you can access the first character of a `String` by using `nameOfString.characters[nameOfString.startIndex]`.
 
-
 **It is assumed that the input string is given in English.**
 
 */
-func beginsWithVowel(_ s: String) -> Bool {
-    if s == "" {
+func beginsWithVowel(string: String) -> Bool {
+    if string == "" {
         return false
     } else {
-        switch(s.characters[s.startIndex]) { 
+        switch(string.characters[string.startIndex]) {
         case "a", "e", "i", "o", "u", "A", "E", "I", "O", "U":
             return true
         default:
@@ -94,52 +93,52 @@ func beginsWithVowel(_ s: String) -> Bool {
 
 /* Example Function Call
 
-beginsWithVowel("Apples") // true
-beginsWithVowel("pIG") // false
-beginsWithVowel("oink") // true
-beginsWithVowel("udacity") // true
-beginsWithVowel("") // false
+beginsWithVowel(string: "Apples") // true
+beginsWithVowel(string: "pIG") // false
+beginsWithVowel(string: "oink") // true
+beginsWithVowel(string: "udacity") // true
+beginsWithVowel(string: "") // false
 
 */
 
-beginsWithVowel("Apples")
-beginsWithVowel("pIG")
-beginsWithVowel("oink")
-beginsWithVowel("udacity")
-beginsWithVowel("")
+beginsWithVowel(string: "Apples")
+beginsWithVowel(string: "pIG")
+beginsWithVowel(string: "oink")
+beginsWithVowel(string: "udacity")
+beginsWithVowel(string: "")
 
 /*:
 ### Exercise 4
 
 The function `funWithWords` should take a single `String` parameter and return a new `String` that is uppercased if it begins with a vowel or lowercased if it begins with a consonant.
 
-To uppercase a `String`, use `nameOfString.uppercaseString`. To lowercase a `String`, use `nameOfString.lowercaseString`.
+To uppercase a `String`, use `nameOfString.uppercased()`. To lowercase a `String`, use `nameOfString.lowercased()`.
 
 **It is assumed that the input string is given in English.**
 
 Hint: Re-use the `beginsWithVowel` function.
 */
-func funWithWords(_ s1: String) -> String {
-    if beginsWithVowel(s1) {
-        return s1.uppercased()
+func funWithWords(string: String) -> String {
+    if beginsWithVowel(string: string) {
+        return string.uppercased()
     } else {
-        return s1.lowercased()
+        return string.lowercased()
     }
     
 }
 
 /* Example Function Call
 
-funWithWords("Apples") // "APPLES"
-funWithWords("pIG") // "pig"
-funWithWords("oink") // "OINK"
-funWithWords("udacity") // "UDACITY"
-funWithWords("") // ""
+funWithWords(string: "Apples") // "APPLES"
+funWithWords(string: "pIG") // "pig"
+funWithWords(string: "oink") // "OINK"
+funWithWords(string: "udacity") // "UDACITY"
+funWithWords(string: "") // ""
 
 */
 
-funWithWords("Apples")
-funWithWords("pIG")
-funWithWords("oink")
-funWithWords("udacity")
-funWithWords("")
+funWithWords(string: "Apples")
+funWithWords(string: "pIG")
+funWithWords(string: "oink")
+funWithWords(string: "udacity")
+funWithWords(string: "")

@@ -40,7 +40,6 @@ The function `beginsWithVowel` should take a single `String` parameter and retur
 
 First, you will want to test if the input string is "". If the input string is "", then return false. Otherwise, you can access the first character of a `String` by using `nameOfString.characters[nameOfString.startIndex]`.
 
-
 **It is assumed that the input string is given in English.**
 
 */
@@ -50,11 +49,11 @@ func beginsWithVowel(/* add parameters here */) /* define the return type */ {
 
 /* Example Function Call
 
-beginsWithVowel("Apples") // true
-beginsWithVowel("pIG") // false
-beginsWithVowel("oink") // true
-beginsWithVowel("udacity") // true
-beginsWithVowel("") // false
+beginsWithVowel(string: "Apples") // true
+beginsWithVowel(string: "pIG") // false
+beginsWithVowel(string: "oink") // true
+beginsWithVowel(string: "udacity") // true
+beginsWithVowel(string: "") // false
 
 */
 
@@ -63,9 +62,9 @@ beginsWithVowel("") // false
 
 The function `funWithWords` should take a single `String` parameter and return a new `String` that is uppercased if it begins with a vowel or is lowercased if it begins with a consonant.
 
-To uppercase a `String`, use `nameOfString.uppercaseString`. To lowercase a `String`, use `nameOfString.lowercaseString`.
-
-**It is assumed that the input string is given in English.**
+ To uppercase a `String`, use `nameOfString.uppercased()`. To lowercase a `String`, use `nameOfString.lowercased()`.
+ 
+ **It is assumed that the input string is given in English.**
 
 Hint: Re-use the `beginsWithVowel` function.
 */
@@ -75,10 +74,10 @@ func funWithWords(/* add parameters here */) /* define the return type */ {
 
 /* Example Function Call
 
-funWithWords("Apples") // "APPLES"
-funWithWords("pIG") // "pig"
-funWithWords("oink") // "OINK"
-funWithWords("udacity") // "UDACITY"
-funWithWords("") // ""
+funWithWords(string: "Apples") // "APPLES"
+funWithWords(string: "pIG") // "pig"
+funWithWords(string: "oink") // "OINK"
+funWithWords(string: "udacity") // "UDACITY"
+funWithWords(string: "") // ""
 
 */
