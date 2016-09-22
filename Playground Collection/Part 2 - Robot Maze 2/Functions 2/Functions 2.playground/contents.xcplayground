@@ -11,5 +11,6 @@
         <page name='In-Out Params Practice'/>
         <page name='In-Out Params Solution'/>
         <page name='Nested Functions'/>
+        <page name='Internal and External Parameter Names'/>
     </pages>
 </playground>
