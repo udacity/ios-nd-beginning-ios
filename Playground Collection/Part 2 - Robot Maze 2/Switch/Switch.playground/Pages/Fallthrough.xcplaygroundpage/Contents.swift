@@ -30,18 +30,12 @@ default:
 
 
 //: There are times when you don’t want any code to be executed if a certain case evaluates to true. For times like these, we can use __break__.
-enum Level {
-    case Low
-    case Medium
-    case High
-}
-
-var patienceLevel = Level.High
+var patienceLevel = "Low"
 
 switch patienceLevel {
-case .Low:
+case "Low":
     print("Arrrgghh!")
-    // The default case represents the remaining levels: .Medium and .High
+    // The default case represents the remaining levels: "Medium" and "High"
 default:
     break
 }

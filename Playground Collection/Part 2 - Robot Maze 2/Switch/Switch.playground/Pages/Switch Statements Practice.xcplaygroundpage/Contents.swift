@@ -6,21 +6,17 @@ import Foundation
 
 //: ### Exercise 1
 //: Below is an if, else-if statement which determines what team to cheer for conditioning on the sport being played.
-enum Sport {
-    case Baseball, Basketball, AmericanFootball, Hockey, Soccer
-}
+var sport = "Baseball"
 
-var sport = Sport.Baseball
-
-if sport == .Baseball {
+if sport == "Baseball" {
     print("Go A's!")
-} else if sport == .Basketball {
+} else if sport == "Basketball" {
     print("Go Warriors!")
-} else if sport == .AmericanFootball {
+} else if sport == "AmericanFootball" {
     print( "Go Raiders!")
-} else if sport == .Hockey {
+} else if sport == "Hockey" {
     print("Go Sharks!")
-} else if sport == .Soccer {
+} else if sport == "Soccer" {
     print("Go Earthquakes!")
 } else {
     print("Go Team!")
@@ -28,7 +24,7 @@ if sport == .Baseball {
 
 //: ### Exercise 2
 //: Below is an if, else-if statement matching an assignment score to a letter grade.
-var score = 97
+var score = 87
 var letterGrade = ""
 
 if 90...100 ~= score {
