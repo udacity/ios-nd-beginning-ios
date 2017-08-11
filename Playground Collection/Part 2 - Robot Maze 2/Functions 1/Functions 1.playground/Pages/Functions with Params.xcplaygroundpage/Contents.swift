@@ -15,10 +15,10 @@ var jarrod = Student(name: "Jarrod", age: 19, school: "University of Alabama-Hun
 
 //: Defining and using a function with parameters.
 func sayHelloToStudent(student: Student) {
-    print("Hello, \(student.name)!")
+    print("Hello, \(student.name)! How is it at \(student.school)")
 }
 
-sayHelloToStudent(gabrielle)
-sayHelloToStudent(jessica)
-sayHelloToStudent(jarrod)
+sayHelloToStudent(student: gabrielle)
+sayHelloToStudent(student: jessica)
+sayHelloToStudent(student: jarrod)
 //: [Next](@next)
