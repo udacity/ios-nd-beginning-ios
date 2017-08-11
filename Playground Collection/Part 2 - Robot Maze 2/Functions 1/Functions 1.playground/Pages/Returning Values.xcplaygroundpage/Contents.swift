@@ -8,10 +8,11 @@ func calculateTip(priceOfMeal: Double) -> Double {
 
 let priceOfMeal = 43.27
 
-let tip = calculateTip(priceOfMeal)
+let tip = calculateTip(priceOfMeal: priceOfMeal)
 
 let totalPriceForMeal = priceOfMeal + tip
 
-let totalPriceForMealInline = priceOfMeal + calculateTip(priceOfMeal)
+let totalPriceForMealInline = priceOfMeal + calculateTip(priceOfMeal: priceOfMeal)
+print(totalPriceForMeal)
 
 //: [Next](@next)

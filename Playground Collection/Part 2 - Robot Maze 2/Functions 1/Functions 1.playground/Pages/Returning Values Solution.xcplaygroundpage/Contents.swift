@@ -8,6 +8,6 @@ func areaOfTriangle(base: Double, height: Double) -> Double {
     return 0.5 * base * height
 }
 
-areaOfTriangle(10.4, height: 3.4)
+areaOfTriangle(base: 10.4, height: 3.4)
 
 //: [Next](@next)

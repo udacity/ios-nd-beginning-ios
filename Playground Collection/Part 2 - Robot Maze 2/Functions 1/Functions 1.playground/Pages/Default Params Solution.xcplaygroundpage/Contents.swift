@@ -8,8 +8,8 @@ func endOfTheYearBonus(basePay: Double, bonus: Double, percentBonus: Double = 0.
     return basePay + bonus + (basePay * percentBonus)
 }
 
-endOfTheYearBonus(20000, bonus: 1000)
-endOfTheYearBonus(20000, bonus: 1000, percentBonus: 0.15)
-endOfTheYearBonus(20000, bonus: 1000, percentBonus: 0.20)
+endOfTheYearBonus(basePay: 20000, bonus: 1000)
+endOfTheYearBonus(basePay: 20000, bonus: 1000, percentBonus: 0.15)
+endOfTheYearBonus(basePay: 20000, bonus: 1000, percentBonus: 0.20)
 
 //: [Next](@next)

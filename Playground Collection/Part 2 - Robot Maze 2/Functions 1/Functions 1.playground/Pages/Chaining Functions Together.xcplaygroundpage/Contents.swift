@@ -7,7 +7,7 @@ func addExcitementToString(string: String) -> String {
 }
 
 // chained together twice
-let excitedString = addExcitementToString(addExcitementToString("yay"))
+let excitedString = addExcitementToString(string: addExcitementToString(string: "yay"))
 
 // chained together 4 times
-let reallyExcitedString = addExcitementToString(addExcitementToString(addExcitementToString(addExcitementToString("wahoo"))))
+let reallyExcitedString = addExcitementToString(string: addExcitementToString(string: addExcitementToString(string: addExcitementToString(string: "wahoo"))))
