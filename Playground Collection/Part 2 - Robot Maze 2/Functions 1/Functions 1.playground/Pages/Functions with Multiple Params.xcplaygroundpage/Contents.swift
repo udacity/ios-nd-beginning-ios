@@ -23,8 +23,8 @@ func greetStudent(student: Student, lateForClass: Bool) {
 }
 
 // Function Calls
-greetStudent(gabrielle, lateForClass: false)
-greetStudent(jessica, lateForClass: false)
-greetStudent(jarrod, lateForClass: true)
+greetStudent(student: gabrielle, lateForClass: false)
+greetStudent(student: jessica, lateForClass: false)
+greetStudent(student: jarrod, lateForClass: true)
 
 //: [Next](@next)

@@ -8,7 +8,7 @@ func loveIt(subject: String) {
     print("I ❤️ \(subject)")
 }
 
-loveIt("Swift")
+loveIt(subject: "Swift")
 
 //: ### Exercise 2
 //: Define a function called `shout` that takes 1 `String` parameter called `subject` and prints "[subject]❗️".
@@ -16,6 +16,6 @@ func shout(subject: String) {
     print("\(subject)❗️")
 }
 
-shout("my head hurts")
+shout(subject: "my head hurts")
 
 //: [Next](@next)
