@@ -19,7 +19,7 @@ func doubleMe(house: House) -> House {
     return House(numberOfBedrooms: house.numberOfBedrooms * 2, numberOfBathrooms: house.numberOfBathrooms * 2)
 }
 
-doubleMe(4)
-doubleMe("james")
-doubleMe(House(numberOfBedrooms: 3, numberOfBathrooms: 2))
+doubleMe(number: 4)
+doubleMe(string: "james")
+print(doubleMe(house: House(numberOfBedrooms: 3, numberOfBathrooms: 2)))
 //: [Next](@next)
