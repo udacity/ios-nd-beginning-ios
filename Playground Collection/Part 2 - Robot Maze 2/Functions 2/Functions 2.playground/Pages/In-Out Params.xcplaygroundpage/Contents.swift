@@ -16,13 +16,13 @@ struct BaseballHittingStats {
 
 var miguelCabrera = BaseballHittingStats(atBats: 384, hits: 131, singles: 86, doubles: 27, triples: 1, homeRuns: 17)
 
-func addHitsWithInOut(inout stats: BaseballHittingStats, hits: Int) {
+func addHitsWithInOut(stats: inout BaseballHittingStats, hits: Int) {
     stats.hits += hits
     print(stats.hits)
 }
 
 // inout parameters are references!
 miguelCabrera.hits
-addHitsWithInOut(&miguelCabrera, hits: 2)
+addHitsWithInOut(stats: &miguelCabrera, hits: 5)
 miguelCabrera.hits
 //: [Next](@next)

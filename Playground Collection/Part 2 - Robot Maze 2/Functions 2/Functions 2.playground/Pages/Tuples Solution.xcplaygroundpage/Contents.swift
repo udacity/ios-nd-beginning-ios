@@ -8,7 +8,7 @@ func basicOperations(x: Double, y: Double) -> (Double, Double, Double, Double) {
     return (x + y, x - y, x * y, x / y)
 }
 
-let results = basicOperations(3, y: 2)
+let results = basicOperations(x: 3, y: 2)
 results.0   // addition
 results.1   // subtraction
 results.2   // multiplication
