@@ -4,7 +4,7 @@ import Foundation
 
 //: ## String initialization
 // Strings are often initialized using string literals
-let theTruth = "Money can't buy me love"
+let theTruth = "Money can't buy me love."
 
 // One can also initialize empty strings
 
