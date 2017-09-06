@@ -1,9 +1,16 @@
 
-# Created by https://www.gitignore.io/api/swift,xcode,macos
-
 ### macOS ###
 *.DS_Store
 
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+
+## Build generated
+build/
+DerivedData/
 
 ## Various settings
 *.pbxuser
@@ -17,8 +24,7 @@
 xcuserdata/
 *.xcuserstate
 
-
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
