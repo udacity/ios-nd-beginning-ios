@@ -18,16 +18,23 @@ for character in animal.characters {
     }
 }
 
+for s in animal.characters {
+    print(s)
+}
+
 // Count all the characters in a string
 let theTruth = "Money can't buy me love."
 theTruth.characters.count
 
 // Reverse the characters in a string 
 var forwardString = "spoons"
-var charactersReversed = forwardString.characters.reverse()
-var backwardsString = String(charactersReversed)
+var backwardsString = String(forwardString.characters.reversed())
 
 //: Unicode scalars are the backbone of Swift strings. As a result, we can incorporate any unicode character directly into a string, including emojis!
 let similarTruth = "💰can't buy me 💖"
+
+var nWithTilde = "\u{0303}"
+nWithTilde.characters.count
+nWithTilde.unicodeScalars.count
 
 //: [Next](@next)
