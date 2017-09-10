@@ -18,12 +18,12 @@ class ViewController: UIViewController {
     
     // MARK - Controller functions
     
-    @IBAction func didIncrement(sender: AnyObject) {
+    @IBAction func didIncrement(_ sender: AnyObject) {
         counterModel.increment()
         updateViewLayer()
     }
     
-    @IBAction func didDecrement(sender: AnyObject) {
+    @IBAction func didDecrement(_ sender: AnyObject) {
         counterModel.decrement()
         updateViewLayer()
     }

@@ -9,7 +9,7 @@
 /// Used to count up or down.
 struct CounterModel {
     /// Only this struct can adjust the value
-    private(set) var value:Int = 0
+    fileprivate(set) var value:Int = 0
     
     mutating func increment() {
         value += 1
