@@ -28,5 +28,5 @@ let lessLikes = lottaLikes.replacingOccurrences(of: "like", with: "")
 
 var securityDeposit = 500
 var monthlyRent = 1000
-var excerptFromLease = "Total is due on the move-in date"
+var excerptFromLease = "\(monthlyRent * 2 + securityDeposit) is due on the move-in date"
 //: [Next](@next)
