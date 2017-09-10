@@ -8,8 +8,8 @@ let thiefString = "He stole my iPhone."
 
 var sillyMonkeyString = monkeyString + " " + thiefString
 //: ### NSString methods
-sillyMonkeyString.containsString("key")
+sillyMonkeyString.contains("key")
 
 let password = "Meet me in St. Louis"
-let newSillyMonkey = password.stringByReplacingOccurrencesOfString("e", withString: "3")
+let newSillyMonkey = password.replacingOccurrences(of: "e", with: "3")
 //: [Next](@next)
