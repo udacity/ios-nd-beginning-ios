@@ -54,6 +54,8 @@ func host(guest: String, extraRoom: Room?) {
     }
 }
 
-var someRoom = Room(name: "guest room", occupied: false)
+var someRoom = Room(name: "back room", occupied: true) // What does occupied do?
 host(guest: "Grandma", extraRoom: someRoom)
 host(guest: "Ryan", extraRoom: nil)
+
+//: [Next](@next)
