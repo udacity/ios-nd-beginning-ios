@@ -23,6 +23,7 @@ DerivedData/
 !default.perspectivev3
 */*xcuserdata*/*
 *xcuserdata*
+*/xcuserdata*
 *.xcuserstate*
 
 ## Other
