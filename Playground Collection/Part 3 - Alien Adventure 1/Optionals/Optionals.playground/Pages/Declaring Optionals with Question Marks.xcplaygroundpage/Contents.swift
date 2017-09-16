@@ -9,11 +9,11 @@ var z: Int?
 var string: String
 string = "123"
 z = Int(string)
-z * 2
+//z * 2
 
 // Example 2
 class AnotherViewController: UIViewController {
-    //var anotherButton: UIButton
+    var anotherButton: UIButton?
 }
 
 

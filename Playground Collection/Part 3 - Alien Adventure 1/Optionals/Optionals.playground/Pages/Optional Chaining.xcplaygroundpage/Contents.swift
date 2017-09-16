@@ -9,7 +9,7 @@ var anotherImageView = UIImageView()
 anotherImageView.image = UIImage(named:"puppy_in_box")
 
 var size = anotherImageView.image?.size
-size.dynamicType
+type(of: size)
 
 if let imageSize = anotherImageView.image?.size {
     print("Here's the image size: \(imageSize)")
@@ -22,7 +22,7 @@ anotherImageView.image
 
 var animal = Animal(name: "Lenny", species: "lemur", tailLength: 12)
 
-//animal = Animal(name: "Gilbert", species: "Gorilla", tailLength: nil )
+animal = Animal(name: "Gilbert", species: "Gorilla", tailLength: nil)
 
 if let tailLength = animal.tail?.length {
     print("\(animal.name)'s tail is \(tailLength) cm long")
