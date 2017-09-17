@@ -9,14 +9,14 @@ func pickUpGroceries(car:Car?) {
     if let car = car {
         print("We'll pick up the groceries in the \(car.model)")
     } else {
-        print("Let's walk to the store")
+        print("Let's walk to the store.")
     }
 }
 
 var someCar = Car(make: "Toyota", model: "Corolla")
-pickUpGroceries(someCar)
+pickUpGroceries(car: someCar)
 
-pickUpGroceries(nil)
+pickUpGroceries(car: nil)
 
 // Example: Hosting a guest in an optional extra room
 func host(guest: String, extraRoom: Room?) {
@@ -28,7 +28,7 @@ func host(guest: String, extraRoom: Room?) {
 }
 
 var someRoom = Room(name: "guest room", occupied: false)
-host("Grandma", extraRoom: someRoom)
-host("Ryan", extraRoom: nil)
+host(guest: "Grandma", extraRoom: someRoom)
+host(guest: "Ryan", extraRoom: nil)
 
 //: [Next](@next)
