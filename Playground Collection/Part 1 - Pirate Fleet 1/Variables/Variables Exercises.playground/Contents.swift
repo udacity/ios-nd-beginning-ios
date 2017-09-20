@@ -14,22 +14,22 @@ For each of the following names and types, create a variables or constant that b
 
 //: ### Exercise 2
 //: Fix the following compiler errors related to assignment, variables, and constants:
-var favoriteLanguage: Character = "Swift"
-gallonsRemainingInTank = "2"
-ageOfSpecimenInWeeks = 32.45
-let _numberOfGasIcons: Int = gallonsRemainingInTank
-let numberOfPolygonsInModel = 30
+var favoriteLanguage: String = "Swift"
+let gallonsRemainingInTank = "2"
+let ageOfSpecimenInWeeks = 32.45
+let _numberOfGasIcons = Int(gallonsRemainingInTank)
+var numberOfPolygonsInModel = 30
 numberOfPolygonsInModel = 32
-let polygonsLeftToDraw = 0
+var polygonsLeftToDraw = 0
 polygonsLeftToDraw = numberOfPolygonsInModel
 
 //: ### Exercise 3
 //: Fix the following compiler errors related to invalid names:
-var n@meOfSchool = "Udacity"
-var class = "Math"
-let import = "Nissian"
-var 🐩myDog! = "🐶"
-var 🐕yourDog? = "🐶"
+var nameOfSchool = "Udacity"
+var classSubject = "Math"
+let _import = "Nissian"
+var 🐩myDog = "🐶"
+var 🐕yourDog = "🐶"
 
 
 
