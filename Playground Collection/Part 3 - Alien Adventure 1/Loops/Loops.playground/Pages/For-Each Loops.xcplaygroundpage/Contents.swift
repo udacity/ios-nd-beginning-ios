@@ -4,6 +4,10 @@ A for-each loop performs an action for each item in a sequence, like a range.
 */
 import Foundation
 
+for i in 1..<1 {
+    print(i)
+}
+
 var lst = [Any]()
 for i in 1...10 {
     if i % 2 == 0 {
@@ -14,18 +18,17 @@ for i in 1...10 {
 }
 print(lst)
 
-for i in 1...3 {
+for _ in 1...3 {
     print("Three cheers for Swift!")
-    print(i)
 }
 
 let word = "Mississippi"
-for c in word.unicodeScalars {
+for c in word {
     print(c)
 }
 
 
-for c in "Oh hi, doggie 🐕".characters {
+for c in "Oh hi, doggie 🐕" {
     print(c)
 }
 
