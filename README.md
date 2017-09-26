@@ -1,3 +1,0 @@
-# Beginning iOS
-
-###### MIT License
